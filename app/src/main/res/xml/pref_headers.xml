@@ -1,0 +1,13 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header
+        android:fragment="com.tiramakan.simabf.ui.view.edits.EditSettingsUI$AuthenticationFragment"
+        android:icon="@drawable/ic_action_key"
+        android:title="@string/pref_authentification"
+        />
+
+      <header
+          android:fragment="com.tiramakan.simabf.ui.view.edits.EditSettingsUI$AdministrationFragment"
+          android:icon="@drawable/settings"
+          android:title="@string/parametresSIMABF"
+          />
+</preference-headers>

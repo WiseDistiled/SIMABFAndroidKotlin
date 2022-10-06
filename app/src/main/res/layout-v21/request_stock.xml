@@ -1,0 +1,118 @@
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <data>
+        <variable
+            name="stock" type="com.tiramakan.simabf.core.modelView.StockForUI"/>
+    </data>
+<ScrollView
+    android:id="@+id/ScrollPrix"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<RelativeLayout
+
+    android:id="@+id/frameDemandeStock"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/formTitle"
+        style="@style/formTitleStyle"
+        android:layout_marginLeft="10dp"
+        android:text="@string/demande_de_stock"
+        android:layout_marginStart="10dp" />
+    <View
+        android:id="@+id/separator"
+        android:visibility="visible"
+        style="@style/TextViewHorizontalSeparatorForTitles"
+        android:layout_below="@id/formTitle"/>
+
+    <TextView
+        android:id="@+id/labelMagazin"
+        android:layout_below="@id/separator"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:textSize="@dimen/text_size_textview"
+        android:text="@string/veuillez_s_lectionner_le_nom_du_depot"
+        android:gravity="start|bottom"
+        android:layout_marginStart="10dp" />
+
+
+    <AutoCompleteTextView
+        android:id="@+id/magazin"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="start"
+        android:layout_below="@id/labelMagazin"
+        android:layout_alignLeft="@id/labelMagazin"
+        android:nextFocusForward="@+id/produits"
+        android:inputType="textAutoComplete"
+        android:binding="@{stock.depot}"
+        android:layout_alignStart="@id/labelMagazin"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/labelProduits"
+        android:layout_below="@id/magazin"
+        android:layout_alignLeft="@id/magazin"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/text_size_textview"
+        android:text="@string/veuillez_entrer_les_noms_des_produits"
+        android:gravity="start|bottom"
+        android:layout_alignStart="@id/magazin" />
+
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/produit"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="start"
+        android:layout_below="@id/labelProduits"
+        android:layout_alignLeft="@id/labelProduits"
+        android:inputType="textAutoComplete"
+        android:binding="@{stock.produit}"
+        android:layout_marginEnd="10dp"
+        android:layout_alignStart="@id/labelProduits"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/labelMesure"
+        android:layout_below="@id/produit"
+        android:layout_alignLeft="@id/produit"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/text_size_textview"
+        android:text="@string/vous_pouvez_pr_ciser_l_unit_de_mesure_optionnel"
+        android:gravity="start|bottom"
+        android:layout_alignStart="@id/produit" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/mesure"
+        android:layout_width="140dp"
+        android:layout_height="25dp"
+        android:focusable="false"
+        android:nestedScrollingEnabled="false"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:spinnerMode="dialog"
+        android:layout_below="@id/labelMesure"
+        android:layout_marginBottom="20dp"
+        android:layout_alignLeft="@id/labelMesure"
+        android:layout_alignStart="@id/labelMesure"
+        android:binding="@{stock.mesure}"
+        />
+
+
+</RelativeLayout>
+
+</ScrollView>
+</layout>

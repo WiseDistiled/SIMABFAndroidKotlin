@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginStart="20dp">
+
+    <TextView
+        android:id="@+id/formTitle"
+        style="@style/formTitleStyle"
+        android:layout_marginLeft="10dp"
+        android:text="@string/liste_des_utilisateurs"
+        android:layout_marginStart="10dp" />
+    <View
+        android:id="@+id/separator"
+        android:visibility="visible"
+        android:layout_marginBottom="20dp"
+        style="@style/TextViewHorizontalSeparatorForTitles"
+        android:layout_below="@id/formTitle"/>
+
+
+    <com.tiramakan.simabf.ui.view.recyclers.ContextMenuRecyclerView
+        android:id="@+id/recycler"
+        android:scrollbars="vertical"
+        android:layout_below="@id/separator"
+        android:name="com.tiramakan.simagri.ui.view.ListUsersUI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.view.Lists.ListUsersUI"
+        tools:listitem="@layout/user_item"
+        android:background="@color/layout_color" />
+
+
+
+    <!--app:layoutManager="LinearLayoutManager"-->
+        <!-->-->
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabMiseEnLigne"
+            android:src="@drawable/ic_action_add"
+            fab:fab_size="normal"
+            fab:fab_label="Ajouter une information "
+            fab:fab_colorNormal="@color/fab_menu_colorNormal_green"
+            fab:fab_colorPressed="@color/fab_menu_colorPressed_green"
+            fab:fab_colorRipple="@color/fab_menu_colorRipple_green"
+            fab:fab_showShadow="true"
+            fab:fab_shadowColor="#66000000"
+            fab:fab_shadowRadius="4dp"
+            fab:fab_shadowXOffset="1dp"
+            fab:fab_shadowYOffset="3dp"
+            style="@style/FABStyle"
+            />
+
+
+    <!--</com.github.clans.fab.FloatingActionMenu>-->
+    </RelativeLayout>
+
+
+
+

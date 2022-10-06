@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/display"
+    android:background="@color/white"
+    android:layout_marginBottom="10dp">
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/choisissez_un_fichier"
+        android:theme="@style/MyDashboardButton"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/buttonChoose" />
+
+    <TextView
+        android:id="@+id/pathVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/buttonChoose"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/t_l_chargez"
+        android:id="@+id/buttonUpload"
+        android:theme="@style/MyDashboardButton"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/pathVideo"/>
+
+    <TextView
+        android:id="@+id/resultFromServer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonUpload"/>
+
+</RelativeLayout>
+
+
+
+
+
+

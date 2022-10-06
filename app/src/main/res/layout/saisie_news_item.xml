@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android.support.design="http://schemas.android.com/tools"
+    android:background="@color/white">
+    <data>
+        <variable
+            name="news" type="com.tiramakan.simabf.core.modelView.NewsForUI"/>
+    </data>
+<ScrollView
+    android:id="@+id/ScrollNews"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+
+    >
+
+    <TextView
+        android:id="@+id/formTitle"
+        style="@style/formTitleStyle"
+        android:text="@string/saisie_des_infos"
+        />
+    <View
+        android:id="@+id/separator"
+        android:visibility="visible"
+        style="@style/TextViewHorizontalSeparatorForTitles"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_titre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:theme="@style/TextLabel"
+        app:boxStrokeColor="@color/white"
+        app:boxBackgroundColor="@color/white"
+        android:background="@color/white"
+        android.support.design:hintAnimationEnabled="true"
+        android.support.design:hintEnabled="true"
+        app:hintTextAppearance="@style/hintStyle"
+        >
+        <EditText
+            android:id="@+id/titre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:binding="@{news.titre}"
+            android:hint="@string/titre"
+            android:layout_marginBottom="10dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:theme="@style/TextLabel"
+        app:boxStrokeColor="@color/white"
+        app:boxBackgroundColor="@color/white"
+        android:background="@color/white"
+        android.support.design:hintAnimationEnabled="true"
+        android.support.design:hintEnabled="true"
+        app:hintTextAppearance="@style/hintStyle"
+        >
+        <EditText
+            android:id="@+id/contenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:gravity="start"
+            android:focusable="true"
+            android:lines="3"
+            android:maxLines="6"
+            android:hint="@string/note"
+            android:binding="@{news.contenu}"
+            android:layout_marginBottom="10dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:theme="@style/TextLabel"
+        app:boxStrokeColor="@color/white"
+        app:boxBackgroundColor="@color/white"
+        android:background="@color/white"
+        android.support.design:hintAnimationEnabled="true"
+        android.support.design:hintEnabled="true"
+        app:hintTextAppearance="@style/hintStyle"
+        >
+        <EditText
+            android:id="@+id/url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textUri"
+            android:gravity="start"
+            android:focusable="true"
+            android:maxLines="2"
+            android:hint="@string/LienUrl"
+            android:binding="@{news.url}"
+            android:layout_marginBottom="10dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:theme="@style/TextLabel"
+        app:boxStrokeColor="@color/white"
+        app:boxBackgroundColor="@color/white"
+        android:background="@color/white"
+        android.support.design:hintAnimationEnabled="true"
+        android.support.design:hintEnabled="true"
+        app:hintTextAppearance="@style/hintStyle"
+        >
+        <EditText
+            android:id="@+id/dateSaisie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:gravity="start"
+            android:focusable="true"
+            android:maxLines="3"
+            android:hint="@string/date_label"
+            android:binding="@{news.date}"
+            android:layout_marginBottom="10dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+</LinearLayout>
+    </ScrollView>
+</layout>

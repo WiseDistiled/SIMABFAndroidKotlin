@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="body_padding_large">10dp</dimen>
+    <dimen name="body_padding_medium">10dp</dimen>
+    <dimen name="speaker_image_padding">8dp</dimen>
+    <dimen name="speaker_image_size">36dp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_xlarge">18sp</dimen>
+    <dimen name="vendor_image_size">100dp</dimen>
+    <string name="modificationStock">Modification stock</string>
+    <style name="DashboardButton">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:drawablePadding">2dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@null</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+</resources>

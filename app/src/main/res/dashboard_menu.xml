@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cubi.rafi.DashboardLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:id="@+id/dashboardFrame"
+    android:background="@android:color/transparent"
+    android:layout_height="fill_parent" >
+
+
+
+    <!--android:background="@color/dashboard_color"-->
+    <Button android:id="@+id/dashboard_prix"
+        style="@style/MyDashboardButtonLand"
+        android:text="Saisie des prix"
+        android:drawableLeft="@drawable/ic_prix_128x128" />
+
+    <Button android:id="@+id/dashboard_offres"
+        style="@style/MyDashboardButtonLand"
+        android:text="Saisie des Offres"
+        android:drawableLeft="@drawable/ic_offres_128x128" />
+
+    <Button android:id="@+id/dashboard_stocks"
+        style="@style/MyDashboardButtonLand"
+        android:text="Saisie des Stocks"
+        android:drawableLeft="@drawable/stocks_128x128" />
+
+    <Button android:id="@+id/dashboard_notes"
+        style="@style/MyDashboardButtonLand"
+        android:text="Saisie des Notes"
+        android:drawableLeft="@drawable/ic_notes_128x128" />
+
+    <Button android:id="@+id/dashboard_infos"
+        style="@style/MyDashboardButtonLand"
+        android:text="Saisie des Infos"
+        android:drawableLeft="@drawable/ic_infos_128x128" />
+
+    <Button android:id="@+id/dashboard_demande"
+        style="@style/MyDashboardButtonLand"
+        android:text="Demande d'informations"
+        android:drawableLeft="@drawable/demander_128x128" />
+
+    <Button android:id="@+id/dashboard_cartes"
+        style="@style/MyDashboardButtonLand"
+        android:text="Position géographique"
+        android:drawableLeft="@drawable/carte_verte_128x128" />
+
+    <Button android:id="@+id/dashboard_stat"
+        style="@style/MyDashboardButtonLand"
+        android:text="Statistiques"
+        android:drawableLeft="@drawable/ic_statistiques_128x128" />
+</cubi.rafi.DashboardLayout>

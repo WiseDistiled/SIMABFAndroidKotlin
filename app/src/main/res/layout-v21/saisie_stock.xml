@@ -1,0 +1,161 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        <variable
+            name="stockToUI" type="com.tiramakan.simabf.core.modelView.StockToUI"
+            />
+        <variable
+            name="pickedDate"
+            type="com.tiramakan.simabf.core.modelView.PickedDate" />
+    </data>
+    <ScrollView
+        android:id="@+id/ScrollPrix"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        >
+<RelativeLayout
+    android:id="@+id/priceLayout"
+    android:layout_margin="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+
+    >
+    <TextView
+        android:id="@+id/formTitle"
+        style="@style/formTitleStyle"
+        android:layout_marginLeft="10dp"
+        android:text="@string/saisie_des_stocks"
+        android:layout_marginStart="10dp" />
+    <View
+        android:id="@+id/separator"
+        android:visibility="visible"
+        style="@style/TextViewHorizontalSeparatorForTitles"
+        android:layout_below="@id/formTitle"/>
+
+    <TextView
+        android:id="@+id/dateSaisieLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/formTitle"
+        android:layout_below="@id/separator"
+        android:text="@string/date_de_relev"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginTop="10dp"
+        android:layout_alignStart="@id/formTitle" />
+    <DatePicker
+        android:id="@+id/dateSaisie"
+        android:layout_below="@id/dateSaisieLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        android:day="@{pickedDate.day}"
+        android:month="@{pickedDate.month}"
+        android:onDateChanged="@{pickedDate.dateChanged}"
+        android:year="@{pickedDate.year}"
+        android:layout_margin="0dp"
+        />
+
+
+
+    <TextView
+        android:id="@+id/labeldepot"
+        android:layout_below="@id/dateSaisie"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/dateSaisie"
+        android:layout_width="150dp"
+        android:text="@string/depot_label"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_alignStart="@id/dateSaisie" />
+    <TextView
+        android:id="@+id/depot"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_toEndOf="@id/labeldepot"
+        android:layout_alignBaseline="@id/labeldepot"
+        android:layout_below="@id/dateSaisie"
+        android:textSize="@dimen/text_size_textview"
+        android:text="@{stockToUI.depot}"
+        android:layout_toRightOf="@id/labeldepot"
+        android:layout_marginStart="20dp" />
+
+
+    <TextView
+        android:id="@+id/produitLabel"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_alignLeft="@id/labeldepot"
+        android:layout_below="@id/labeldepot"
+        android:textSize="@dimen/text_size_textview"
+        android:text="@string/produit_titre"
+        android:layout_alignStart="@id/labeldepot" />
+
+    <TextView
+        android:id="@+id/produit"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/produitLabel"
+        android:layout_alignBaseline="@id/produitLabel"
+        android:layout_below="@id/labeldepot"
+        android:textSize="@dimen/text_size_textview"
+        android:text="@{stockToUI.produit}"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/produitLabel" />
+
+    <TextView
+        android:id="@+id/prixDeGrosLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/produitLabel"
+        android:layout_below="@id/produitLabel"
+        android:textSize="@dimen/text_size_textview"
+        android:text="@string/stock_label"
+        android:layout_alignStart="@id/produitLabel" />
+
+    <EditText
+        android:id="@+id/montant"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/prixDeGrosLabel"
+        android:layout_alignLeft="@id/prixDeGrosLabel"
+        android:textSize="@dimen/edit_text_size"
+        android:nextFocusForward="@+id/mesure"
+        android:text="@={stockToUI.balance}"
+        android:layout_alignStart="@id/prixDeGrosLabel" />
+
+    <Spinner
+        android:id="@+id/mesure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:nestedScrollingEnabled="true"
+        android:textAppearance="?android:attr/textAppearance"
+        android:spinnerMode="dialog"
+        android:padding="0dp"
+        android:layout_below="@id/prixDeGrosLabel"
+        android:layout_alignBaseline="@id/montant"
+        android:layout_toRightOf="@id/montant"
+        android:layout_marginBottom="20dp"
+        android:layout_toEndOf="@id/montant"
+        app:entries="@{stockToUI.mesuresItems}"
+        app:selectedValue="@={stockToUI.mesure}"
+        />
+    </RelativeLayout>
+
+    </ScrollView>
+
+</layout>

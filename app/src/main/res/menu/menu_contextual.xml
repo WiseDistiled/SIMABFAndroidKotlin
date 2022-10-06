@@ -1,0 +1,18 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_send" android:title="@string/menu_envoyer"
+        android:icon="@android:drawable/ic_menu_send"
+        />
+    <item android:id="@+id/action_edit" android:title="@string/menu_modifier"
+        android:icon="@android:drawable/ic_menu_edit"
+        />
+    <item android:id="@+id/action_delete" android:title="@string/menu_supprimer"
+        android:icon="@android:drawable/ic_menu_delete"
+         />
+    <item android:id="@+id/action_sended" android:title="@string/marquer_comme_envoye"
+        android:icon="@android:drawable/ic_menu_send"
+        />
+
+</menu>
+
+

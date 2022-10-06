@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tiramakan.simabf">
+
+    <!-- <uses-sdk tools:overrideLibrary="android.support.test.uiautomator.v18" /> -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--<uses-permission android:nom="android.permission.GET_ACCOUNTS" />-->
+    <!--<uses-permission android:nom="android.permission.MANAGE_ACCOUNTS" />-->
+    <!--<uses-permission android:nom="android.permission.AUTHENTICATE_ACCOUNTS" />-->
+    <!--<uses-permission android:nom="android.permission.USE_CREDENTIALS" />-->
+
+<!--    <uses-permission android:name="android.permission.SEND_SMS" />-->
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+<!--    <uses-permission android:name="android.permission.RECORD_AUDIO" />-->
+
+    <application
+        android:name=".bootstrap.BootstrapApplicationImpl"
+        android:icon="@mipmap/logo_sima_bf_foreground"
+        android:requestLegacyExternalStorage="true"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:launchMode="standard"
+        android:supportsRtl="false"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/MyMaterialTheme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning"
+        tools:replace="android:supportsRtl"
+        tools:targetApi="n">
+<!--        <meta-data-->
+        <!--            android:name="io.fabric.ApiKey"-->
+<!--            android:value="28daf683e46f727371a872fd1da01cffa5a5951c"-->
+<!--            />-->
+<!--        <meta-data-->
+<!--            android:name="com.google.android.maps.v2.API_KEY"-->
+<!--            android:value="AIzaSyBosKtiZcbuyCwI6V2T2OzLm7O3Cn7vCis" />-->
+        <meta-data
+            android:name="default_country"
+            android:value="BF"/>
+
+        <activity
+            android:name=".ui.view.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
+            >
+
+        </activity>
+
+        <activity
+            android:name=".ui.view.edits.EditSettingsUI"
+            android:label="@string/action_settings"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".ui.view.splash_activity"
+            android:label="@string/app_name"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+<!--        <activity-->
+<!--            android:name=".ui.view.SearchActivity"-->
+<!--            android:label="@string/title_activity_search"-->
+<!--            android:theme="@style/MyMaterialTheme">-->
+
+
+<!--        </activity>-->
+    </application>
+
+</manifest>

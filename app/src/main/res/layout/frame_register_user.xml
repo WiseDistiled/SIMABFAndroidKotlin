@@ -1,0 +1,261 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android.support.design="http://schemas.android.com/tools"
+    android:background="@color/white">
+    <data>
+        <variable
+            name="utilisateur" type="com.tiramakan.simabf.core.modelView.UserToUI"
+            />
+    </data>
+    <ScrollView
+        android:id="@+id/ScrollUser"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="30dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/frameRegisterUser"
+        android:layout_marginStart="10dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="0dp"
+            android:theme="@style/TextLabel"
+            app:boxStrokeColor="@color/white"
+            app:boxBackgroundColor="@color/white"
+            android:background="@color/white"
+            android.support.design:hintAnimationEnabled="true"
+            android.support.design:hintEnabled="true"
+            app:hintTextAppearance="@style/hintStyle"
+            android:layout_marginStart="5dp">
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/edit_text_size"
+                android:inputType="text"
+                android:hint="@string/name"
+                android:binding="@{utilisateur.nom}"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_firstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="0dp"
+            app:boxStrokeColor="@color/white"
+            app:boxBackgroundColor="@color/white"
+            android:background="@color/white"
+            android.support.design:hintAnimationEnabled="true"
+            android.support.design:hintEnabled="true"
+            android:layout_below="@id/input_layout_name"
+            android:layout_alignLeft="@id/input_layout_name"
+            app:hintTextAppearance="@style/hintStyle"
+            android:layout_marginStart="0dp"
+            android:layout_alignStart="@id/input_layout_name">
+            <EditText
+                android:id="@+id/firstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/edit_text_size"
+                android:inputType="text"
+                android:hint="@string/firstname"
+                android:binding="@{utilisateur.prenom}"
+                android:autofillHints="" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/labelgenre"
+            android:layout_below="@id/input_layout_firstname"
+            android:layout_alignStart="@id/input_layout_firstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:orientation="vertical"
+            android:layout_alignLeft="@id/input_layout_firstname">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/genderLabel"
+                style="@style/TextView.InputLabel"
+                />
+
+            <Spinner
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:spinnerMode="dropdown"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                app:entries="@{utilisateur.genderItems}"
+                app:selectedValue="@={utilisateur.genre}"
+                />
+
+        </LinearLayout>
+       <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            app:boxStrokeColor="@color/white"
+            app:boxBackgroundColor="@color/white"
+            android:background="@color/white"
+            android.support.design:hintAnimationEnabled="true"
+            android.support.design:hintEnabled="true"
+            android:layout_below="@id/labelgenre"
+            android:layout_alignLeft="@id/labelgenre"
+            app:hintTextAppearance="@style/hintStyle"
+            android:layout_marginStart="5dp"
+            android:layout_alignStart="@id/labelgenre">
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/edit_text_size"
+                android:inputType="textEmailAddress"
+                android:hint="@string/email_label"
+                android:binding="@{utilisateur.email}"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="0dp"
+            app:boxStrokeColor="@color/white"
+            app:boxBackgroundColor="@color/white"
+            android:background="@color/white"
+            android.support.design:hintAnimationEnabled="true"
+            android.support.design:hintEnabled="true"
+            android:layout_below="@id/input_layout_email"
+            android:layout_alignLeft="@id/input_layout_email"
+            app:hintTextAppearance="@style/hintStyle"
+            android:layout_marginStart="0dp"
+            android:layout_alignStart="@id/input_layout_email">
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/edit_text_size"
+                android:inputType="phone"
+                android:hint="@string/mainPhone"
+                android:binding="@{utilisateur.mobilePhone}"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_secondPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="0dp"
+            app:boxStrokeColor="@color/white"
+            app:boxBackgroundColor="@color/white"
+            android:background="@color/white"
+            android.support.design:hintAnimationEnabled="true"
+            android.support.design:hintEnabled="true"
+            android:layout_below="@id/input_layout_phone"
+            android:layout_alignLeft="@id/input_layout_phone"
+            app:hintTextAppearance="@style/hintStyle"
+            android:layout_marginStart="0dp"
+            android:layout_alignStart="@id/input_layout_phone">
+            <EditText
+                android:id="@+id/secondPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/edit_text_size"
+                android:inputType="phone"
+                android:hint="@string/secondPhone"
+                android:binding="@{utilisateur.secondPhone}"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/linearReseau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_layout_secondPhone"
+            android:layout_alignLeft="@id/input_layout_secondPhone"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/reseau"
+                style="@style/TextView.InputLabel"
+                />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/reseau"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
+                app:entries="@{utilisateur.reseauItems}"
+                app:selectedValue="@={utilisateur.reseau}"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                />
+
+        </LinearLayout>
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/linearReseau"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:layout_marginLeft="0dp"-->
+<!--            app:boxStrokeColor="@color/white"-->
+<!--            app:boxBackgroundColor="@color/white"-->
+<!--            android:background="@color/white"-->
+<!--            android.support.design:hintAnimationEnabled="true"-->
+<!--            android.support.design:hintEnabled="true"-->
+<!--            android:layout_below="@id/input_layout_secondPhone"-->
+<!--            android:layout_alignLeft="@id/input_layout_secondPhone"-->
+<!--            app:hintTextAppearance="@style/hintStyle"-->
+<!--            android:layout_marginStart="0dp"-->
+<!--            android:layout_alignStart="@id/input_layout_secondPhone">-->
+
+<!--            <Spinner-->
+<!--                android:id="@+id/reseau"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="10sp"-->
+<!--                android:hint="@string/reseau"-->
+<!--                android:spinnerMode="dropdown"-->
+<!--                style="@style/Widget.AppCompat.Spinner.Underlined"-->
+<!--                app:entries="@{utilisateur.reseauItems}"-->
+<!--                app:selectedValue="@={utilisateur.reseau}"-->
+<!--                />-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+    </RelativeLayout>
+    </ScrollView>
+</layout>

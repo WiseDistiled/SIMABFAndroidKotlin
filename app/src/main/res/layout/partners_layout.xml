@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+
+    <com.tiramakan.simabf.ui.view.recyclers.ContextMenuRecyclerView
+        android:id="@+id/partnerRecycler"
+        android:name="com.tiramakan.simagri.ui.view.Partners"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        tools:context=".ui.view.Lists.ListPartners"
+        tools:listitem="@layout/partner_item"
+        android:background="@color/layout_color" />
+
+</RelativeLayout>

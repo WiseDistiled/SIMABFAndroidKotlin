@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference android:title="E-mail de l'administrateur"
+        android:defaultValue=" "
+        android:inputType="textEmailAddress"
+        android:summary="Adresse mail de l'administrateur. SIMABF utilisera cette adresse pour signaler des problèmes "
+        android:key="adminMail" />
+
+    <EditTextPreference android:title="Numero Court SIMABF "
+    android:defaultValue="3459"
+    android:inputType="text"
+    android:summary="Numéro court pour l'envoi de SMS au serveur SIMABF"
+    android:key="numeroCourt" />
+
+
+
+
+    <EditTextPreference android:title="URL Plateforme SIMABF"
+        android:key="webServiceServer"
+        android:defaultValue="https://sima-bf.net:8877/"
+        android:summary="Veuillez renseigner l'adresse du serveur de webservices par défaut : https://sima-bf.net:8877/"/>
+
+    <CheckBoxPreference android:title="Requête par sms ?"
+        android:defaultValue="true"
+        android:summary="Si cette option est choisie les requêtes au serveur SIMABF se feront par SMS si la connexion internet n'est pas disponible"
+        android:key="sendRequestBySMS" />
+    <CheckBoxPreference android:title="Forcer l'envoi par sms ?"
+        android:defaultValue="false"
+        android:summary="Si cette option est choisie les requêtes au serveur SIMABF se feront par SMS même si la connexion internet est  disponible"
+        android:key="forceTransportSMS" />
+
+    <CheckBoxPreference android:title="Forcer l'url du serveur de production ?"
+        android:defaultValue="false"
+        android:summary="Si cette option est choisie les requêtes au serveur SIMABF sur l'URL du Serveur de production"
+        android:key="forceURLProduction" />
+</PreferenceScreen>

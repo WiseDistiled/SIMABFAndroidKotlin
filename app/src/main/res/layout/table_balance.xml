@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <data>
+        <variable
+            name="stockForUI" type="com.tiramakan.simabf.core.modelView.StockForUI"/>
+    </data>
+<LinearLayout
+              android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="match_parent"
+              android:weightSum="10"
+>
+
+    <EditText
+        android:id="@+id/decimalvalue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:inputType="numberDecimal"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_weight="5"
+        android:binding="@{stockForUI.balance}"
+        android:layout_marginEnd="10dp"
+        android:autofillHints="" />
+
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/mesure"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:nestedScrollingEnabled="false"
+        android:spinnerMode="dialog"
+        android:layout_weight="5"
+        android:textAppearance="?android:attr/textAppearance"
+        android:binding="@{stockForUI.mesure}"
+        />
+
+
+</LinearLayout>
+</layout>

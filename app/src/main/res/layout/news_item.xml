@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/container"
+    android:layout_margin="10dp"
+    android:background="@color/layout_color">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="30dp" />
+
+    <TextView
+        android:id="@+id/commentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_alignLeft="@id/title"
+        android:text="@string/contenu"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginRight="10dp"
+        android:gravity="start"
+        android:layout_alignStart="@id/title"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_below="@id/title"
+        android:layout_toRightOf="@id/commentLabel"
+        android:layout_alignBaseline="@id/commentLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/commentLabel" />
+
+
+
+    <TextView
+        android:id="@+id/urlLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comment"
+        android:layout_alignLeft="@id/commentLabel"
+        android:text="@string/url"
+        android:textStyle="normal"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_alignStart="@id/commentLabel"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/url"
+        android:layout_below="@id/comment"
+        android:layout_toRightOf="@id/urlLabel"
+        android:layout_alignBaseline="@id/urlLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/urlLabel" />
+
+
+    <TextView
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/url"
+        android:layout_alignLeft="@id/commentLabel"
+        android:text="@string/date"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginRight="10dp"
+        android:gravity="start"
+        android:layout_alignStart="@id/commentLabel"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_below="@id/url"
+        android:layout_toRightOf="@id/dateLabel"
+        android:layout_alignBaseline="@id/dateLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/dateLabel"
+        />
+
+
+
+    <View
+        android:id="@+id/separator"
+        android:visibility="visible"
+        style="@style/TextViewHorizontalSeparator"
+        android:layout_below="@id/date"/>
+
+
+
+</RelativeLayout>

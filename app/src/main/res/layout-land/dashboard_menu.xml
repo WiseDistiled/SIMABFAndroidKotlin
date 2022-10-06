@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tiramakan.simabf.ui.view.widgets.MyDashboardLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:id="@+id/dashboardFrame"
+    android:background="@android:color/transparent"
+    android:layout_height="fill_parent"
+    android:layout_margin="5dp"
+    >
+
+    <androidx.appcompat.widget.AppCompatButton android:id="@+id/dashboard_prix"
+        style="@style/MyDashboardButtonLand"
+        android:text="@string/prix_label"
+        android:drawableLeft="@mipmap/prix"
+        android:drawableStart="@mipmap/prix" />
+
+    <androidx.appcompat.widget.AppCompatButton android:id="@+id/dashboard_etalonnage"
+        style="@style/MyDashboardButtonLand"
+        android:text="@string/etalonnage"
+        android:drawableLeft="@mipmap/ic_etalonnage"
+        android:drawableStart="@mipmap/ic_etalonnage" />
+
+    <androidx.appcompat.widget.AppCompatButton android:id="@+id/dashboard_offre_vente"
+        style="@style/MyDashboardButtonLand"
+        android:text="@string/offre_de_vente"
+        android:drawableLeft="@mipmap/offre_vente"
+        android:drawableStart="@mipmap/offre_vente" />
+
+    <androidx.appcompat.widget.AppCompatButton android:id="@+id/dashboard_offre_achat"
+        style="@style/MyDashboardButtonLand"
+        android:text="@string/offre_d_achat"
+        android:drawableLeft="@mipmap/offre_achat"
+        android:drawableStart="@mipmap/offre_achat"
+        />
+
+
+
+    <androidx.appcompat.widget.AppCompatButton android:id="@+id/dashboard_stocks"
+        style="@style/MyDashboardButtonLand"
+        android:text="@string/stock_label"
+        android:drawableLeft="@mipmap/stocks"
+        android:drawableStart="@mipmap/stocks" />
+
+<!--    <androidx.appcompat.widget.AppCompatButton android:id="@+id/dashboard_infos"-->
+<!--        style="@style/MyDashboardButtonLand"-->
+<!--        android:text="@string/infos_label"-->
+<!--        android:drawableLeft="@mipmap/info"-->
+<!--        android:drawableStart="@mipmap/info" />-->
+
+    <androidx.appcompat.widget.AppCompatButton android:id="@+id/dashboard_demande"
+        style="@style/MyDashboardButtonLand"
+        android:text="@string/demandes"
+        android:drawableLeft="@mipmap/demande"
+        android:drawableStart="@mipmap/demande" />
+
+    <androidx.appcompat.widget.AppCompatButton android:id="@+id/dashboard_enregistrer"
+        style="@style/MyDashboardButtonLand"
+        android:text="@string/register_label"
+        android:drawableLeft="@mipmap/enregistrer"
+        android:drawableStart="@mipmap/enregistrer" />
+
+    <androidx.appcompat.widget.AppCompatButton android:id="@+id/dashboard_lists"
+        style="@style/MyDashboardButtonLand"
+        android:text="@string/listes"
+        android:drawableLeft="@mipmap/liste"
+        android:drawableStart="@mipmap/liste" />
+
+
+</com.tiramakan.simabf.ui.view.widgets.MyDashboardLayout>

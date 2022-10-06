@@ -1,0 +1,31 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml:2:1-54
+INJECTED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml:2:1-54
+INJECTED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml:2:1-54
+INJECTED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml:2:1-54
+INJECTED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml:2:1-54
+	package
+		ADDED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml:2:11-52
+		INJECTED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml
+		INJECTED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml
+		ADDED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml:2:1-54
+		INJECTED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml:2:1-54
+uses-sdk
+INJECTED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml
+INJECTED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml
+INJECTED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml
+INJECTED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml
+		ADDED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml
+		INJECTED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml
+		ADDED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml
+		INJECTED from D:\tools\SIMABFAndroidKotlin\AndroidBootstrap\src\main\AndroidManifest.xml

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:title="Votre login (N° Téléphone), Exple : +226 70707070 "
+        android:key="login"
+        android:inputType="text"
+        android:padding="10sp"
+        android:summary="Veuillez renseigner votre login "/>
+    <EditTextPreference
+        android:title="Votre Mot de passe"
+        android:key="password"
+        android:inputType="textPassword"
+        android:padding="10sp"
+        android:summary="Veuillez renseigner votre mot de passe"/>
+
+</PreferenceScreen>

@@ -1,0 +1,478 @@
+<resources>
+    <string name="app_name">SIMABF</string>
+    <string name="versionTitle">Version N° %1$d.%2$d </string>
+
+    <string name="request_sell_offer">Demande offre de vente</string>
+    <string name="request_buy_offer">Demande offre d\'achat</string>
+
+    <!-- AuthenticatorActivity -->
+    <string name="label_email_address">Email Address</string>
+    <string name="label_password">Password</string>
+    <string name="label_sign_in">Sign In</string>
+    <string name="message_signing_in">Signing in…</string>
+    <string name="blank_field_warning">Please populate this field</string>
+    <string name="signup_link">New to Bootstrap? &lt;a href=http://www.androidbootstrap.com>Click here&lt;/a> to learn more.</string>
+    <string name="message_bad_credentials">Email Address or Password is incorrect</string>
+    <string name="message_auth_failed">Please enter a valid password</string>
+    <string name="message_auth_failed_new_account">Please enter a valid email address &amp; password</string>
+    <string name="timer_running">Timer is running %s</string>
+    <string name="timer_is_paused">Timer is paused</string>
+    <string name="stop">Stop</string>
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="title_timer">Timer</string>
+    <string name="home">Home</string>
+    <string name="navigation_drawer_open">Drawer Open</string>
+    <string name="navigation_drawer_close">Drawer Close</string>
+    <string name="base_url">http://10.0.2.2:9191/</string>
+    <string name="miseAJourBD">Mise à jour</string>
+    <string name="title_activity_dbupdater">DBUpdater</string>
+    <string name="title_activity_preferences">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Toujours</item>
+        <item>Si possible</item>
+        <item>Jamais</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="modePaiement">
+        <item>Cash</item>
+        <item>Virement</item>
+        <item>Carte de crédit</item>
+        <item>Mobile</item>
+    </string-array>
+    <string-array name="qualities">
+        <item>Haute</item>
+        <item>Moyenne</item>
+        <item>Basse</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Données &amp; synchronisation</string>
+    <string name="pref_header_data">Données</string>
+    <string name="pref_header_sync">Réinitialisation</string>
+    <string name="pref_title_sync_frequency">Fréquence de synchronisation</string>
+    <string-array name="currency_titles">
+        <item>FCFA</item>
+        <item>CEDI</item>
+        <item>EURO</item>
+        <item>Dollard</item>
+    </string-array>
+
+    <string-array name="currency_Values">
+        <item>FCFA</item>
+        <item>CEDI</item>
+        <item>EURO</item>
+        <item>Dollard</item>
+    </string-array>
+
+    <string-array name="pref_sync_frequency_titles">
+        <item>24 heures</item>
+        <item>3 jours</item>
+        <item>7 jours</item>
+        <item>30 jours</item>
+        <item>90 jours</item>
+        <item>Jamais</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>1440</item>
+        <item>4320</item>
+        <item>10080</item>
+        <item>43200</item>
+        <item>129600</item>
+        <item>-1</item>
+    </string-array>
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="title_activity_main">SIMABF </string>
+    <string name="action_settings">Paramètres</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="one">Fragment One</string>
+    <string name="fragmentTwo">Fragment Two</string>
+    <string name="fragmentThree">Fragment Three</string>
+
+    <string name="search_title">Chercher</string>
+    <string name="action_search">Chercher</string>
+    <string name="drawer_open">Ouvrir</string>
+    <string name="drawer_close">Fermer</string>
+
+    <string name="nav_item_home">Accueil</string>
+    <string name="nav_item_friends">Amis</string>
+    <string name="nav_item_notifications">Messages</string>
+    <string name="nav_item_produits">Produits</string>
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_home</item>
+        <item>@string/nav_item_friends</item>
+        <item>@string/nav_item_notifications</item>
+        <item>@string/nav_item_produits</item>
+    </string-array>
+
+    <string name="title_messages">Messages</string>
+    <string name="title_friends">Amis</string>
+    <string name="title_home">Accueil</string>
+    <string name="title_produits">Produits</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="accueil">Accueil</string>
+    <string name="amis">Amis</string>
+    <string name="messages">Messages</string>
+    <string name="produits">Produits</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="prix">Prix</string>
+    <string name="offres">Offres</string>
+    <string name="stocks">Stocks</string>
+    <string name="infos">Infos</string>
+    <string name="title_activity_settings">Paramètres</string>
+
+
+    <string name="action_previous">Précédent</string>
+    <string name="action_next">Suivant</string>
+    <string name="action_finish">Terminer</string>
+    <string name="MAJBase">Mise à jour Base</string>
+    <string name="confirmMaJBase">Confirmation Mise à jour de la base</string>
+    <string name="AttentionInitialisationBD">Confirmez-vous l\'actualisation des paramètres de SIMABF ?</string>
+    <string name="AttentionSuppressionBD">Attention cette action va supprimer les paramètres de SIMABF, confirmez-vous ?</string>
+    <string name="yesBtn">OUI</string>
+    <string name="NoBtn">NON</string>
+    <string name="labelMarche">Marché :</string>
+    <string name="veuillezSaisirLeMarche">Veuillez saisir le marché</string>
+    <string-array name="planets_array">
+        <item>Kg</item>
+        <item>g</item>
+        <item>Yor</item>
+    </string-array>
+
+    <!--<string-array nom="paymentMode">-->
+    <!--<item>Especes</item>-->
+    <!--<item>Cheque_marchand</item>-->
+    <!--<item>transfert_bancaire</item>-->
+    <!--<item>Check_ou_carte_credit</item>-->
+    <!--<item>NA</item>-->
+    <!--</string-array>-->
+    <string-array name="paymentMode">
+        <item>Especes</item>
+        <item>Chèque marchand</item>
+        <item>transfert bancaire</item>
+        <item>Check ou carte de credit</item>
+        <item>Non Applicable</item>
+    </string-array>
+    <string-array name="typeOffre">
+        <item>Achat</item>
+        <item>Vente</item>
+    </string-array>
+
+
+    <string name="sortable_indicator_content_description">Sortable Indicator</string>
+    <string name="title_car_activity">SortableTableView Example</string>
+
+    <string name="default_text_ps">180PS</string>
+    <string name="separator">/</string>
+    <string name="default_text_kws">120kW</string>
+
+    <string name="car_producer_image_content_description">Car Producer</string>
+    <string name="saisie_prix_etape1"><![CDATA[Saisie des prix - Etape &#189;]]></string>
+    <string name="saisie_prix_etape2">Saisie des prix - Etape 2/2</string>
+    <string name="saisie_prix">Saisie des prix</string>
+    <string name="prix_de_gros_detail">Prix (gros/détail) :</string>
+    <string name="prix_detail">Prix de détail :</string>
+    <string name="btnValider">Valider</string>
+    <string name="commentaire">Commentaire :</string>
+    <string name="produitLabel">Produit :</string>
+    <string name="action_send">Envoyer :</string>
+    <string name="produits_title">Produits</string>
+    <string name="depots_title">Depots</string>
+    <string name="marches_title">Marchés</string>
+    <string name="parametres">Paramètres</string>
+    <string name="aide">Aide</string>
+    <string name="quantityLabel">Quantité</string>
+    <string name="formatDate">dd/MM/yyyy</string>
+    <string name="notes">Notes</string>
+    <string name="LienUrl">Lien URL</string>
+    <string name="date_info">Date de l\'info</string>
+    <string name="date_expiration">Date Expiration</string>
+    <string name="telephone_auteur">Téléphone Auteur</string>
+    <string name="titre">Titre</string>
+
+
+    <string name="translate_button_text">Translate</string>
+    <string name="phoneword_label_text">Enter a phoneword:</string>
+    <string name="default_text">1–855-ANDROID</string>
+    <string name="call_button_text">Call</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="title_activity_translate_log">Call Log</string>
+
+    <string name="call_log_button_text">Call Log</string>
+    <string name="call_log_list_text">Numbers Called:</string>
+    <string name="action_call_log">Call Log</string>
+    <string name="saisieNotesDeMarche">SAISIE DES NOTES</string>
+    <string name="prendreUnePhoto">Prendre une photo</string>
+    <string name="saisie_des_infos">Saisie des informations</string>
+    <string name="saisie_des_prix">Saisie des prix</string>
+    <string name="saisie_des_offres">Saisie des offres</string>
+    <string name="saisie_des_stocks">Saisie des stocks</string>
+    <string name="liste_des_infos">Liste des informations</string>
+    <string name="liste_des_offres_vente">Liste des offres de vente</string>
+    <string name="liste_des_offres_achats">Liste des offres d\'achat</string>
+    <string name="liste_des_notes">Liste des notes</string>
+    <string name="liste_des_stocks">Liste des stocks</string>
+    <string name="liste_des_prix">Liste des prix</string>
+    <string name="title_activity_splash_activity">splash_activity</string>
+    <string name="mise_a_jour_GPS">Acquisition coordonnées GPS</string>
+    <string name="veuillezPatienter">Veuillez patienter quelques secondes</string>
+
+
+    <string name="sample_form_text">Formulaire d\'enregistrement</string>
+    <string name="hint_firstname">Veuillez saisir le prénom(s)</string>
+    <string name="hint_lastname">Veuillez saisir le nom</string>
+    <string name="sample_form_summary">Résumé</string>
+    <string name="menu_modifier">Modifier</string>
+    <string name="menu_supprimer">Supprimer</string>
+    <string name="marquer_comme_envoye">Marquer comme envoyé</string>
+    <string name="search_hint">Chercher</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="demandeStock">Consultation du Stock</string>
+    <string name="demandeOffreAchat">Demande offres d\'achat</string>
+    <string name="demandeOffreVente">Demande offres de vente</string>
+    <string name="demandePrix">Demande de prix</string>
+    <string name="btn_enregistrer">Enregistrer</string>
+    <string name="produit_name">Nom du produit</string>
+    <string name="lieu_stockage">Lieu de stockage</string>
+    <string name="lieu_livraison">Lieu de livraison</string>
+    <string name="quantite">Quantité</string>
+    <string name="mesureLabel">Mesure</string>
+    <string name="unitPriceLabel">Prix unitaire</string>
+    <string name="totalPriceLabel">Montant</string>
+    <string name="nomAuteur">Nom Auteur</string>
+    <string name="paymentModeLabel">Mode de paiement</string>
+    <string name="date_label">Date de saisie</string>
+    <string name="authorPhone">Téléphone Auteur</string>
+    <string name="note">Note</string>
+    <string name="photo_label">Photo - cliquez sur l\'image pour changer Taille maximum ->5mo </string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="descriptionNote">Image descriptive de la note</string>
+    <string name="choixCategorieProduit">CHOIX DE LA CATEGORIE DE PRODUIT</string>
+    <string name="pref_authentification">Authentification</string>
+    <string name="preferences">Mes préférences</string>
+    <string name="administration">Administration</string>
+    <string name="parametresSIMABF">Paramètres SIMABF</string>
+    <string name="menu_envoyer">Envoyer</string>
+    <string name="conditions">Conditions : </string>
+    <string name="prix_label">Prix </string>
+    <string name="offre_label">Offres</string>
+    <string name="stock_label">Stocks</string>
+    <string name="notes_label">Notes</string>
+    <string name="infos_label">Infos</string>
+    <string name="marches_label">Marchés</string>
+    <string name="produits_label">Produits</string>
+    <string name="depot_label">Depots</string>
+    <string name="offre_de_vente">Offres de vente</string>
+    <string name="offre_d_achat">Offres d\'achat</string>
+    <string name="offre">Offres</string>
+    <string name="demandes">Requêtes</string>
+    <string name="listes">Listes</string>
+    <string name="positionGeo">Position GPS </string>
+    <string name="positionMarche"> GPS Marchés</string>
+    <string name="statistiques">Statistiques</string>
+    <string name="date_releve">Date de relevé</string>
+    <string name="next">Suivant</string>
+    <string name="send">Envoyer</string>
+    <string name="register_label">Enregistrer</string>
+    <string name="modificationStock">Modification du stock</string>
+    <string name="ListeDesMarches">Liste des marchés</string>
+    <string name="ListeDesDepots">Liste des depots</string>
+    <string name="ListeDesProduits">Liste des produits</string>
+    <string name="categorie_label">Catégories produits</string>
+    <string name="ListeDesCategoriesDeProduit">Liste des catégories de produits</string>
+    <string name="date_de_releve">Date de relevé</string>
+    <string name="marche_choisi">Marché choisi :</string>
+    <string name="commentaireLabel">Commentaire</string>
+    <string name="Mode_de_paiement">Mode de paiement :</string>
+    <string name="categorie_choisie">Catégorie choisie :</string>
+    <string name="quality_label">Qualité</string>
+    <string name="produit_choisi">Produit choisi :</string>
+    <string name="valider_label">Valider</string>
+    <string name="marce_choisi">Marche choisi</string>
+    <string name="nom_des_produits">Nom des produits</string>
+    <string name="choix_du_marche">CHOIX DU MARCHE</string>
+    <string name="rechercher">Rechercher</string>
+    <string name="choix_du_produit">CHOIX DU PRODUIT</string>
+    <string name="choix_unite_mesure">CHOIX DE L\'UNITE DE MESURE</string>
+    <string name="choix_du_depot">CHOIX DU DEPOT</string>
+    <string name="civilite">Civilité</string>
+    <string name="entreprise">Entreprise</string>
+    <string name="secondPhone">N° Téléphone secondaire :</string>
+    <string name="activiteLabel">Activité :</string>
+    <string name="firstname">Prénom(s)</string>
+    <string name="name">Nom</string>
+    <string name="mainPhone">N° Téléphone principal</string>
+    <string name="poste">Poste</string>
+    <string name="activity">Activité</string>
+    <string name="adressePhysique">Adresse physique</string>
+    <string name="genderLabel">Genre</string>
+    <string name="birthDate_label">Date de naissance</string>
+    <string name="numTelephone">N° Téléphone :</string>
+    <string name="liste_des_utilisateurs">Liste des utilisateurs</string>
+    <string name="users_label">Liste des utilisateurs</string>
+    <string name="label_genre">Genre</string>
+    <string name="email_label">E-mail</string>
+    <string name="email_label_text">E-mail :</string>
+    <string name="saisie_parametres_auth">Authentification</string>
+    <string name="authentification">Authentification</string>
+    <string name="partenaires">Partenaires</string>
+    <string name="liste_des_partenaires">Liste des partenaires</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="login">Login (N° Téléphone), exple: +226XXXXXXXX</string>
+    <string name="logo_partenaire">Logo du partenaire</string>
+    <string name="description">Description</string>
+    <string name="entrepriseLabel">Entreprise</string>
+    <string name="physicalAddress">Adresse Physique</string>
+    <string name="posteLabel">Poste</string>
+    <string name="conseil_reduction_taille_image">Pour réduire la taille des images capturées et consommer moins de méga-octets à la mise en ligne, vous devez diminuer la résolution de votre appareil photo à moins de 3M(16:9)</string>
+    <string name="conseil_label">Astuce :</string>
+    <string name="modification_prix">Modification prix</string>
+    <string name="depot_choisi">Depot choisi :</string>
+    <string name="longitudeLabel">Longitude :</string>
+    <string name="latitudeLabel">Latitude :</string>
+    <string name="appVersionName">Version 1</string>
+    <string name="ajouterLabel">Ajouter une requête</string>
+    <string name="positionGeoMarche">Position GPS Marchés</string>
+    <string name="appName">SIMABF</string>
+    <string name="appwebsite">plateforme web : https://sima-bf.net</string>
+    <string name="submit">Submit</string>
+    <string name="demande_d_offre_de_vente">Demande d\'offre de vente</string>
+    <string name="veuillez_saisir_les_noms_des_produits">Veuillez saisir les noms des produits</string>
+    <string name="demande_de_prix">Demande de prix</string>
+    <string name="veuillez_s_lectionner_les_noms_des_produits">Veuillez sélectionner les noms des produits</string>
+    <string name="veuillez_entrer_le_nom_du_march">Veuillez entrer le nom du marché</string>
+    <string name="vous_pouvez_pr_ciser_l_unit_de_mesure">Vous pouvez préciser l\'unité de mesure</string>
+    <string name="r_ponse_du_serveur_simabf">Réponse du serveur SIMABF</string>
+    <string name="resume_de_votre_requete">RESUME DE VOTRE REQUETE</string>
+    <string name="demande_de_stock">Demande de stock</string>
+    <string name="veuillez_s_lectionner_le_nom_du_depot">Veuillez sélectionner le nom du depot</string>
+    <string name="veuillez_entrer_les_noms_des_produits">Veuillez entrer les noms des produits</string>
+    <string name="vous_pouvez_pr_ciser_l_unit_de_mesure_optionnel">Vous pouvez préciser l\'unité de mesure (optionnel)</string>
+    <string name="r_initialisation_de_simabf">Réinitialisation de SIMABF</string>
+    <string name="r_initialiser">Réinitialiser</string>
+    <string name="textview">TextView</string>
+    <string name="en_cours_de_d_veloppement">En cours de développement</string>
+    <string name="depot">Dépôt :</string>
+    <string name="stock">Stock :</string>
+    <string name="d_tail_produit">Détail Produit</string>
+    <string name="nom_produit">Nom Produit</string>
+    <string name="march">Marché :</string>
+    <string name="tel_auteur_de_l_offre">Tel Auteur de l\'offre :</string>
+    <string name="quantit">Quantité :</string>
+    <string name="prix_unitaire">Prix unitaire :</string>
+    <string name="prix_total">Prix total : </string>
+    <string name="photo">Photo :  </string>
+    <string name="contenu">Note de marché :</string>
+    <string name="url">URL :</string>
+    <string name="date">Date :</string>
+    <string name="image">image</string>
+    <string name="d_tail_march">Détail Marché</string>
+    <string name="nom">Nom :</string>
+    <string name="d_p_t_choisi">Dépôt choisi :</string>
+    <string name="nom_du_d_p_t">Nom du dépôt</string>
+    <string name="date_de_relev">Date de relevé des prix</string>
+    <string name="nom_du_march">Nom du marché</string>
+    <string name="nom_du_produit">Nom du produit</string>
+    <string name="prix_de_d_tail">Prix de détail</string>
+    <string name="nom_scientifique">Nom Scientifique :</string>
+    <string name="mesure_par_d_faut">Mesure par défaut :</string>
+    <string name="nom_de_l_auteur">Nom de l\'auteur</string>
+    <string name="email_de_l_auteur">email de l\'auteur</string>
+    <string name="location">Location :</string>
+    <string name="actualiser">Actualiser</string>
+    <string name="se_reconnecter">Se reconnecter</string>
+    <string name="fermer">Fermer</string>
+    <string name="code">Code :</string>
+    <string name="categorie">Catégorie :</string>
+    <string name="magazin_choisi">Depot choisi :</string>
+    <string name="nom_auteur_offre">Nom de l\'auteur de l\'offre : </string>
+    <string name="datelab">Date : </string>
+    <string name="image_note">Image Note</string>
+    <string name="qualite">Qualité</string>
+    <string name="reseau">Réseau</string>
+    <string name="liste_des_offres">Liste des offres</string>
+    <string name="marche_titre">Marché :</string>
+    <string name="produit_titre">Produit :</string>
+    <string name="choix_typeprix">Choix Type Prix</string>
+    <string name="choix_typegeo">Choix Type Objet à géolocaliser</string>
+    <string name="type_titre">Type Prix :</string>
+    <string name="geolocaliser">geolocaliser</string>
+    <string name="typePrixLabel">Type Prix : </string>
+    <string name="prixlabel">Prix :</string>
+    <string name="notes_marche_label">Saisie Note de Marché</string>
+    <string name="commentaire_Label">Etat Approvisionnement :</string>
+    <string name="typologie_marche">Typologie </string>
+    <string name="region_marche">Région :</string>
+    <string name="nomProvince">Province :</string>
+    <string name="nomCommune">Commune : </string>
+    <string name="noteDeMarche">Note de marché : </string>
+    <string name="periodicite_marche">Périodicité : </string>
+    <string name="produitSelectionne">Produit sélectionné : </string>
+    <string name="typologie_marchetitre">Typologie  :</string>
+    <string name="etatApprovLabel">Etat d\'approvisionnement</string>
+    <string name="choix_typeoffre">Choix Type Offre</string>
+    <string name="date_offre">Date saisie offre</string>
+    <string name="geolocaliser_marche">Géolocaliser les Marchés</string>
+    <string name="geolocaliser_depot">Géolocaliser les Dépôts</string>
+    <string name="observationsNote">Observations</string>
+    <string name="etalonnage">Etalonnage</string>
+    <string name="liste_des_etalonnages">Etalonnages</string>
+    <string name="umlLabel">Unité de Mesure Locale (UML) : </string>
+     <string name="ulLabel">Unité de mesure Légale (UL)            : </string>
+    <string name="valeur">Valeur : </string>
+    <string name="lieuxLivraison">Lieux de Livraison</string>
+    <string name="lieuxStockage">Lieux de stockage</string>
+    <string name="etalonnage_label">Etalonnages</string>
+    <string name="liste_etalonnage_label">Liste des étalonnages</string>
+    <string name="liste_offre_de_vente_label">Liste des offres de vente</string>
+    <string name="liste_offre_d_achat_label">Liste des offres d\'achat</string>
+    <string name="liste_stock_label">Liste des stocks</string>
+    <string name="liste_prix_label">Liste des prix</string>
+    <string name="region_offre">Région </string>
+    <string name="region_offre_label">Région : </string>
+    <string name="reseau_label_text">Réseau :</string>
+    <string name="default_header">Header %1$d</string>
+    <string name="default_cell">Data [%1$d:%2$d]</string>
+    <string name="choisissez_un_fichier">Choisissez un fichier</string>
+    <string name="t_l_chargez">Téléchargez</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+</resources>

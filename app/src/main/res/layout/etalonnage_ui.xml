@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/stockList"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginStart="20dp">
+
+    <TextView
+        android:id="@+id/formTitle"
+        style="@style/formTitleStyle"
+        android:text="@string/liste_des_etalonnages"
+         />
+    <View
+        android:id="@+id/separator"
+        android:visibility="visible"
+        android:layout_marginBottom="20dp"
+        style="@style/TextViewHorizontalSeparatorForTitles"
+        android:layout_below="@id/formTitle"/>
+
+    <com.tiramakan.simabf.ui.view.recyclers.ContextMenuRecyclerView
+        android:id="@+id/etalonnageUIRecycler"
+        android:layout_below="@id/separator"
+        android:name="com.tiramakan.simagri.ui.view.EtalonnagesUI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.view.Lists.ListEtalonnagesUI"
+        tools:listitem="@layout/etalonnage_item"
+        android:background="@color/layout_color" />
+
+    </RelativeLayout>
+
+

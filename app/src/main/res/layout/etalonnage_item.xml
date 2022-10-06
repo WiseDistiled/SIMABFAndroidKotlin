@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/layout_color">
+    <TextView
+        android:id="@+id/umlLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/umlLabel"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="start"
+        android:layout_marginStart="20dp" />
+    <TextView
+        android:id="@+id/uml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:textSize="@dimen/text_size_textview"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@id/umlLabel"
+        android:layout_alignBaseline="@id/umlLabel"
+        android:layout_toEndOf="@id/umlLabel"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:id="@+id/ulLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/uml"
+        android:layout_marginBottom="10dp"
+        android:layout_alignLeft="@id/umlLabel"
+        android:text="@string/ulLabel"
+        android:textStyle="normal"
+        android:gravity="start"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_alignStart="@id/umlLabel" />
+
+    <TextView
+        android:id="@+id/ul"
+        android:layout_below="@id/uml"
+        android:layout_toRightOf="@id/ulLabel"
+        android:layout_marginLeft="20dp"
+        android:layout_alignBaseline="@id/ulLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_toEndOf="@id/ulLabel"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:id="@+id/valeurLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ul"
+        android:layout_marginBottom="10dp"
+        android:layout_alignLeft="@id/umlLabel"
+        android:text="@string/valeur"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_alignStart="@id/umlLabel" />
+
+    <TextView
+        android:id="@+id/valeur"
+        android:layout_below="@id/ul"
+        android:layout_toRightOf="@id/valeurLabel"
+        android:layout_alignBaseline="@id/valeurLabel"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_alignLeft="@id/ul"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_toEndOf="@id/valeurLabel"
+        android:layout_alignStart="@id/ul"
+        android:inputType="none"
+        android:textIsSelectable="true"
+        android:layout_marginStart="20dp" />
+
+    <View
+        android:id="@+id/separator"
+        android:visibility="visible"
+        style="@style/TextViewHorizontalSeparator"
+        android:layout_below="@id/valeur"/>
+
+
+
+</RelativeLayout>

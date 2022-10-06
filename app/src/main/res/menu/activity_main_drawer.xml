@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/group_features_id">
+        <item android:title="@string/accueil"
+            android:id="@+id/nav_item_accueil"
+            android:icon="@drawable/ic_home"/>
+    </group>
+    <group android:id="@+id/group_settings_id"
+        >
+        <item android:title="@string/actualiser"
+            android:id="@+id/nav_item_sync"
+            android:icon="@drawable/ic_refresh"
+            />
+
+
+    </group>
+
+    <group android:id="@+id/group_auth_id"
+        >
+    <item android:title="@string/se_reconnecter"
+        android:id="@+id/nav_item_auth"
+        android:icon="@drawable/ic_profile"/>
+    </group>
+    <group android:id="@+id/group_geolocaliser_marche"
+        >
+        <item android:title="@string/geolocaliser_marche"
+            android:id="@+id/nav_item_geolocaliser_marche"
+            android:icon="@drawable/ic_action_geolocaliser"/>
+    </group>
+    <group android:id="@+id/group_geolocaliser_depot"
+        >
+        <item android:title="@string/geolocaliser_depot"
+            android:id="@+id/nav_item_geolocaliser_depot"
+            android:icon="@drawable/ic_action_geolocaliser"/>
+    </group>
+    <group android:id="@+id/group_partners_id"
+        >
+        <item android:title="@string/partenaires"
+            android:id="@+id/nav_item_group_partners"
+            android:icon="@drawable/ic_profile"/>
+    </group>
+     <group android:id="@+id/group_close_id"
+        >
+
+    <item android:title="@string/fermer"
+        android:id="@+id/nav_item_fermer"
+        android:icon="@drawable/ic_close"/>
+    </group>
+
+</menu>

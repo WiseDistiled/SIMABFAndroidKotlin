@@ -1,0 +1,494 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:android.support.design="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="priceToUI" type="com.tiramakan.simabf.core.modelView.PriceToUI"
+            />
+        <variable
+            name="saisiePrixUI" type="com.tiramakan.simabf.ui.view.edits.SaisiePrixUI"
+            />
+        <variable
+            name="pickedDate"
+            type="com.tiramakan.simabf.core.modelView.PickedDate" />
+    </data>
+    <ScrollView
+        android:id="@+id/ScrollPrix"
+        android:layout_margin="30sp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:id="@+id/priceLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            >
+            <TextView
+                android:id="@+id/formTitle"
+                style="@style/formTitleStyle"
+                android:text="@{priceToUI.getTitle()}"
+                android:layout_margin="10dp" />
+            <View
+                android:id="@+id/separator"
+                android:layout_below="@id/formTitle"
+                android:visibility="visible"
+                style="@style/TextViewHorizontalSeparatorForTitles"/>
+
+            <TextView
+                android:id="@+id/dateSaisieLabel"
+                android:layout_below="@id/separator"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:text="@string/date_de_relev"
+                android:textSize="@dimen/text_size_textview"/>
+            <DatePicker
+                android:id="@+id/dateSaisie"
+                android:layout_below="@id/dateSaisieLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:datePickerMode="calendar"
+                android:calendarViewShown="false"
+                android:day="@{pickedDate.day}"
+                android:month="@{pickedDate.month}"
+                android:onDateChanged="@{pickedDate.dateChanged}"
+                android:year="@{pickedDate.year}"
+                android:layout_margin="0dp"
+                />
+
+
+            <TextView
+                android:id="@+id/marcheLabel"
+                android:layout_below="@id/dateSaisie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/marche_titre"
+                android:textSize="@dimen/text_size_textview" />
+
+            <TextView
+                android:id="@+id/marche"
+                android:layout_below="@id/dateSaisie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/marcheLabel"
+                android:layout_alignBaseline="@id/marcheLabel"
+                android:hint="@string/marche_choisi"
+                android:text="@{priceToUI.marche}" />
+
+            <TextView
+                android:id="@+id/typologieLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dateSaisie"
+                android:layout_alignBaseline="@id/marche"
+                android:layout_marginTop="42dp"
+                android:layout_toEndOf="@id/marche"
+                android:text="@string/typologie_marchetitre"
+                android:textSize="@dimen/text_size_textview" />
+
+            <TextView
+                android:id="@+id/typologie"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dateSaisie"
+                android:layout_alignBaseline="@id/typologieLabel"
+                android:layout_width="120dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/typologieLabel"
+                android:text="@{saisiePrixUI.typologie_marche}"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/region_marcheLabel"
+                android:layout_below="@id/marcheLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/region_marche"
+                android:textSize="@dimen/text_size_textview" />
+
+            <TextView
+                android:id="@+id/region_marche"
+                android:layout_below="@id/marcheLabel"
+                android:layout_width="200dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/region_marcheLabel"
+                android:hint="@string/region_marche"
+                android:text="@{saisiePrixUI.region_marche}" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/nomProvinceLabel"-->
+<!--                android:layout_below="@id/marcheLabel"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_toEndOf="@id/region_marche"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:text="@string/nomProvince"-->
+<!--                android:textSize="@dimen/text_size_textview" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/nomProvince"-->
+<!--                android:layout_below="@id/marcheLabel"-->
+<!--                android:layout_width="200dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_toEndOf="@id/nomProvinceLabel"-->
+<!--                android:hint="@string/nomProvince"-->
+<!--                android:text="@{saisiePrixUI.province_marche}" />-->
+
+            <TextView
+                android:id="@+id/nomCommuneLabel"
+                android:layout_below="@id/region_marcheLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/nomCommune"
+                android:textSize="@dimen/text_size_textview" />
+
+            <TextView
+                android:id="@+id/nomCommune"
+                android:layout_below="@id/region_marcheLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:layout_alignBaseline="@id/nomCommuneLabel"
+                android:layout_toEndOf="@id/nomCommuneLabel"
+                android:hint="@string/nomCommune"
+                android:text="@{saisiePrixUI.commune_marche}"
+                android:layout_toRightOf="@id/nomCommuneLabel" />
+
+
+
+            <TextView
+                android:id="@+id/periodicite_marcheLabel"
+                android:layout_below="@id/region_marcheLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/nomCommune"
+                android:layout_marginTop="20dp"
+                android:text="@string/periodicite_marche"
+                android:textSize="@dimen/text_size_textview"
+                android:layout_toRightOf="@id/nomCommune"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:id="@+id/periodicite_marche"
+                android:layout_below="@id/region_marcheLabel"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/periodicite_marcheLabel"
+                android:hint="@string/periodicite_marche"
+                android:text="@{saisiePrixUI.periodicite_marche}"
+                android:layout_toRightOf="@id/periodicite_marcheLabel" />
+
+            <TextView
+                android:id="@+id/produitLabel"
+                android:layout_below="@id/nomCommuneLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/produit_titre"
+                android:textSize="@dimen/text_size_textview"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:id="@+id/produit"
+                android:layout_below="@id/nomCommuneLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/produitLabel"
+                android:hint="@string/produitSelectionne"
+                android:text="@{priceToUI.produit}"
+                android:layout_toRightOf="@id/produitLabel" />
+
+            <TextView
+                android:id="@+id/prixDeGrosLabel"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/produitLabel"
+                android:layout_below="@id/produitLabel"
+                android:textSize="@dimen/text_size_textview"
+                android:text="@string/prix"
+                android:layout_alignStart="@id/produitLabel" />
+            <EditText
+                android:id="@+id/montant"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:layout_below="@id/prixDeGrosLabel"
+                android:layout_alignLeft="@id/prixDeGrosLabel"
+                android:textSize="@dimen/edit_text_size"
+                android:nextFocusForward="@+id/mesure"
+                android:text="@={priceToUI.montant}"
+                android:layout_alignStart="@id/prixDeGrosLabel" />
+
+            <Spinner
+                android:id="@+id/mesure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:nestedScrollingEnabled="true"
+                android:spinnerMode="dialog"
+                android:padding="0dp"
+                android:layout_below="@id/prixDeGrosLabel"
+                android:layout_alignBaseline="@id/montant"
+                android:layout_toRightOf="@id/montant"
+                android:layout_marginBottom="20dp"
+                android:nextFocusForward="@+id/comment"
+                android:layout_toEndOf="@id/montant"
+                app:entries="@{priceToUI.mesuresItems}"
+                app:selectedValue="@={priceToUI.mesure}"
+                />
+        <RelativeLayout
+            android:id="@+id/etatAppro"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:layout_below="@id/montant"
+            android:layout_alignLeft="@id/montant"
+            android:layout_alignStart="@id/montant"
+            >
+            <TextView
+                android:id="@+id/etatApprovLabel"
+
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:text="@string/etatApprovLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textSize="@dimen/text_size_textview"
+                android:layout_marginStart="10dp" />
+            <Spinner
+                android:id="@+id/etatApprov"
+                android:layout_below="@id/etatApprovLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:nestedScrollingEnabled="true"
+                android:spinnerMode="dialog"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:nextFocusForward="@+id/input_layout_noteMarche"
+                app:entries="@{priceToUI.etatApproItems}"
+                app:selectedValue="@={priceToUI.comment}"
+                />
+        </RelativeLayout>
+
+            <TextView
+                android:id="@+id/noteMarcheTitle"
+                style="@style/formTitleStyle"
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/etatAppro"
+                android:text="@string/notes_marche_label"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp" />
+            <View
+                android:id="@+id/noteseparator"
+                android:visibility="visible"
+                android:layout_below="@id/noteMarcheTitle"
+                style="@style/TextViewHorizontalSeparatorForTitles"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_noteMarche"
+                android:layout_below="@id/noteseparator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:theme="@style/TextLabel"
+                app:boxStrokeColor="@color/white"
+                app:boxBackgroundColor="@color/white"
+                android:background="@color/white"
+                android:nextFocusForward="@+id/input_layout_comment"
+                android.support.design:hintAnimationEnabled="true"
+                android.support.design:hintEnabled="true"
+                app:hintTextAppearance="@style/hintStyle"
+                >
+                <EditText
+                    android:id="@+id/noteMarche"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:gravity="start"
+                    android:focusable="true"
+                    android:maxLines="3"
+                    android:lines="2"
+                    android:hint="@string/observationsNote"
+                    android:text="@={priceToUI.note_contenu}"
+                    android:layout_marginBottom="10dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/btnSelectPhoto"
+                android:layout_below="@id/input_layout_noteMarche"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:textSize="@dimen/text_size_textview"
+                android:text="@string/photo_label"
+                android:layout_marginStart="0dp" />
+
+
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_below="@id/btnSelectPhoto"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_photo"
+                android:minHeight="100dp"
+                android:minWidth="100dp"
+                android:longClickable="false"
+                android:contentDescription="@string/descriptionNote" />
+            <TextView
+                android:id="@+id/conseilLabel"
+                android:layout_below="@id/image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_textview"
+                android:text="@string/conseil_label"
+                android:layout_marginStart="0dp" />
+            <TextView
+                android:id="@+id/conseil"
+                android:layout_below="@id/conseilLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:textSize="@dimen/text_size_textview"
+                android:text="@string/conseil_reduction_taille_image"
+                android:layout_marginStart="0dp" />
+
+            <TextView
+                android:id="@+id/longitudeLabel"
+                android:layout_below="@id/conseil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:textSize="@dimen/text_size_textview"
+                android:text="@string/longitude"
+                android:layout_marginEnd="20dp" />
+            <TextView
+                android:id="@+id/longitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/longitudeLabel"
+                android:layout_alignBaseline="@id/longitudeLabel"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:textSize="@dimen/text_size_textview"
+                android:text="@{priceToUI.getLongitudeText()}"
+                android:layout_toEndOf="@id/longitudeLabel" />
+
+            <TextView
+                android:id="@+id/latitudeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_below="@id/longitudeLabel"
+                android:text="@string/latitude"
+                android:textSize="@dimen/text_size_textview"
+                android:layout_marginEnd="20dp" />
+
+            <TextView
+                android:id="@+id/latitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/latitudeLabel"
+                android:layout_alignBaseline="@id/latitudeLabel"
+                android:textSize="@dimen/text_size_textview"
+                android:text="@{priceToUI.getLatitudeText()}"
+                android:layout_marginRight="20dp"
+                android:layout_toEndOf="@id/latitudeLabel"
+                android:layout_marginEnd="20dp" />
+            <!--    </RelativeLayout>-->
+            <com.github.clans.fab.FloatingActionMenu
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="11dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="11dp"
+                fab:menu_animationDelayPerItem="55"
+                fab:menu_openDirection="up"
+                fab:menu_shadowColor="#66aff198"
+                fab:menu_shadowRadius="4dp"
+                fab:menu_shadowXOffset="1dp"
+                fab:menu_shadowYOffset="4dp"
+                fab:menu_showShadow="true"
+                fab:fab_label="Vidéo/Audio"
+                android:layout_alignParentEnd="true">
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fabAjouterAudio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:menu_labels_textColor="#131313"
+                    fab:fab_colorNormal="@color/fab_menu_colorNormal_green"
+                    fab:fab_colorPressed="@color/fab_menu_colorPressed_orange"
+                    fab:fab_colorRipple="@color/fab_menu_colorRipple_orange"
+                    fab:fab_showShadow="true"
+                    fab:fab_shadowColor="#66000000"
+                    fab:fab_shadowRadius="4dp"
+                    fab:fab_shadowXOffset="1dp"
+                    fab:fab_shadowYOffset="3dp"
+                    fab:fab_size="normal"
+                    android:src="@drawable/ic_download"
+                    fab:fab_label="Ajouter une audio" />
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fabAjouterVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:menu_labels_textColor="#131313"
+                    fab:fab_colorNormal="@color/fab_menu_colorNormal_green"
+                    fab:fab_colorPressed="@color/fab_menu_colorPressed_orange"
+                    fab:fab_colorRipple="@color/fab_menu_colorRipple_orange"
+                    fab:fab_showShadow="true"
+                    fab:fab_shadowColor="#66000000"
+                    fab:fab_shadowRadius="4dp"
+                    fab:fab_shadowXOffset="1dp"
+                    fab:fab_shadowYOffset="3dp"
+                    fab:fab_size="normal"
+                    android:src="@drawable/ic_download"
+                    fab:fab_label="Ajouter une vidéo" />
+            </com.github.clans.fab.FloatingActionMenu>
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+</layout>

@@ -1,0 +1,210 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'realm-android'
+
+repositories {
+    jcenter()
+    mavenCentral()
+    mavenLocal()
+   // maven { url 'https://mvnrepository.com/artifact/com.mobapphome.library/mah-android-updater' }
+    maven {
+        url "https://mvnrepository.com/artifact/com.android.databinding/library/"
+    }
+
+    maven { url 'https://jitpack.io' }
+    maven {
+        url "https://mvnrepository.com/artifact/io.realm/realm-gradle-plugin"
+    }
+
+
+    maven {
+        url "https://github.com/donnfelker/mvn-repo/raw/master/"
+
+    }
+    maven {
+        url "https://jitpack.io"
+
+    }
+    maven {
+        url "https://mvnrepository.com"
+
+    }
+    maven {
+        url "https://oss.sonatype.org"
+
+    }
+
+//    maven {
+//        url "https://dl.bintray.com/hummatli/maven"
+//    }
+//    maven { url 'https://mvnrepository.com/artifact/com.mobapphome.library/mah-android-updater' }
+    google()
+
+}
+
+
+android {
+    //  buildToolsVersion '29.0.2'
+    defaultConfig {
+        applicationId "sima-bf.android"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode computeVersionCode()
+        versionName computeVersionName()
+        applicationId 'simabf.android.release'
+        multiDexEnabled true
+        testInstrumentationRunner = 'android.support.test.runner.AndroidJUnitRunner'
+    }
+    buildTypes {
+        release {
+            //shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+          //  proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix '.debug'
+            ext.enableCrashlytics = true
+            // zipAlign false // this is default for debug
+        }
+        release {
+            ext.enableCrashlytics = false
+            minifyEnabled false
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    def flavor = variant.name
+                    def versionName = variant.versionName
+                    outputFileName = "simabf-${flavor}_${versionName}.apk"
+                }
+            }
+        }
+    }
+    packagingOptions {
+        // Exclude file to avoid
+        // Error: Duplicate files during packaging of APK
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+}
+
+static def computeVersionCode() {
+    return 24
+//    if (System.env.BUILD_NUMBER) {              // Check if there is a em build number.
+//        return "$System.env.BUILD_NUMBER".toInteger()
+//    } else if (System.env.CIRCLE_BUILD_NUM) {   // Check to see if this is built on circle CI
+//        return "$System.env.CIRCLE_BUILD_NUM".toInteger()
+//    } else {
+//        return 1                                // if none is found, default to 1.
+//    }
+}
+
+static def computeVersionName() {
+    return "0." + computeVersionCode()
+}
+android {
+    signingConfigs {
+        config {
+            storeFile file('C:/tools/SIMABFAndroid/cles_android/simakey.jks')
+        }
+    }
+}
+kapt {
+   correctErrorTypes = true
+}
+//androidExtensions {
+//    experimental = true
+//}
+android {
+    compileSdk 33
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+    buildToolsVersion '30.0.3'
+}
+def preference_version = '1.2.0'
+dependencies {
+    kapt  "com.android.databinding:library:$gradle_version"
+ //   implementation project(':tableview')
+    implementation 'com.github.clans:fab:1.6.4'
+    //implementation 'com.android.support:design:28.0.0'
+   // implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.21"
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+   // implementation "androidx.core:core:1.6.0"
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation "androidx.drawerlayout:drawerlayout:1.1.1"
+    implementation 'androidx.cardview:cardview:1.0.0'
+    kapt 'androidx.annotation:annotation:1.4.0'
+    implementation 'com.github.evrencoskun:TableView:v0.8.9.4'
+    //implementation 'com.evrencoskun.library:tableview:0.8.8'
+    compileOnly 'javax.annotation:jsr250-api:1.0'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    kapt 'com.google.dagger:dagger-compiler:2.42'
+    implementation 'com.google.dagger:dagger:2.42'
+    kapt 'org.parceler:parceler:1.1.13'
+    kapt 'com.jakewharton:butterknife:10.2.3'
+    kapt 'org.parceler:parceler:1.1.13'
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    implementation 'org.parceler:parceler-api:1.1.13'
+    implementation 'com.github.ajalt:timberkt:1.5.1'
+    implementation 'com.squareup:otto:1.3.8'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.android.support:recyclerview-v7:30.0.0'
+    implementation 'com.android.support:cardview-v7:30.0.0'
+    implementation 'com.github.machinarius:preferencefragment:0.1.2'
+    implementation 'androidx.drawerlayout:drawerlayout:1.1.1'
+    implementation 'com.android.support:design:30.0.0'
+    implementation 'com.android.support:appcompat-v7:30.0.0'
+    implementation 'com.github.ganfra:material-spinner:2.0.0'
+    implementation 'com.google.android.material:material:1.6.1'
+ //   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.0"
+    implementation "androidx.preference:preference-ktx:$preference_version"
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0-alpha07'
+    androidTestImplementation 'androidx.test:rules:1.4.1-alpha07'
+    //The android-app-updater libary
+    implementation 'com.mobapphome.library:mah-android-updater:1.0.14'
+ //   implementation group: 'com.mobapphome.library', name: 'mah-android-updater', version: '1.0.2'
+  //  implementation 'org.jsoup:jsoup:1.10.2'
+
+}
+// This is to fix the errors : java.lang.NoClassDefFoundError: Failed resolution of: Landroid/view/View$OnUnhandledKeyEventListener;
+configurations.all {
+    resolutionStrategy.eachDependency { details ->
+        def requested = details.requested
+        if (requested.group == "androidx") {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion "26.+"
+            }
+        }
+    }
+}

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android.support.design="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@color/white">
+
+    <TextView
+    android:id="@+id/formTitle"
+    style="@style/formTitleStyle"
+    android:layout_marginLeft="10dp"
+    android:text="@string/saisie_parametres_auth"
+        android:layout_marginStart="10dp" />
+    <View
+    android:id="@+id/separator"
+    android:visibility="visible"
+    style="@style/TextViewHorizontalSeparatorForTitles"
+    android:layout_marginBottom="20dp"
+    android:layout_below="@id/formTitle"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/loginLabel"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/separator"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:backgroundTint="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:boxBackgroundColor="@color/white"
+        android:background="@color/white"
+        android:theme="@style/TextLabel"
+
+        app:hintTextAppearance="@style/hintStyle"
+        android:layout_marginRight="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:inputType="phone"
+            android:textSize="@dimen/edit_text_size"
+            android.support.design:hintAnimationEnabled="true"
+            android.support.design:hintEnabled="true"
+            android:hint="@string/login"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordLabel"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/loginLabel"
+        android:layout_alignStart="@id/loginLabel"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:hint="@string/mot_de_passe"
+        android:theme="@style/TextLabel"
+        app:boxStrokeColor="@color/white"
+        app:boxBackgroundColor="@color/white"
+        android:background="@color/white"
+        android.support.design:hintAnimationEnabled="true"
+        android.support.design:hintEnabled="true"
+        app:hintTextAppearance="@style/hintStyle"
+        android:layout_alignLeft="@id/loginLabel"
+        android:layout_marginRight="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            app:passwordToggleEnabled="true"
+            android:inputType="textPassword"
+            android:textSize="@dimen/edit_text_size"
+            android.support.design:hintAnimationEnabled="true"
+            android.support.design:hintEnabled="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/validerBtn"
+        android:layout_alignStart="@id/passwordLabel"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordLabel"
+        android:text="@string/valider_label"
+        android:layout_marginBottom="20dp"
+        android:layout_alignLeft="@id/passwordLabel"
+        />
+
+<!--    <com.beardedhen.androidbootstrap.BootstrapButton-->
+<!--        android:id="@+id/validerBtn"-->
+<!--        android:layout_alignStart="@id/passwordLabel"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/passwordLabel"-->
+<!--        android:text="@string/valider_label"-->
+<!--        app:bootstrapBrand="success"-->
+<!--        app:bootstrapSize="lg"-->
+<!--        app:buttonMode="regular"-->
+<!--        app:showOutline="false"-->
+<!--        app:roundedCorners="true"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:layout_alignLeft="@id/passwordLabel" />-->
+</RelativeLayout>

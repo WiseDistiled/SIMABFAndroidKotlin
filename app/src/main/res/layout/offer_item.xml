@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/container"
+    android:background="@color/layout_color">
+
+
+    <TextView
+        android:id="@+id/produitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/produitLabel"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="start"
+        android:layout_marginStart="20dp" />
+    <TextView
+        android:id="@+id/produit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:textSize="@dimen/text_size_textview"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@id/produitLabel"
+        android:layout_alignBaseline="@id/produitLabel"
+        android:layout_toEndOf="@id/produitLabel"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:id="@+id/auteurLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/produit"
+        android:layout_alignLeft="@id/produit"
+        android:text="@string/tel_auteur_de_l_offre"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginRight="20dp"
+        android:gravity="start"
+        android:layout_alignStart="@id/produitLabel"
+        android:layout_marginEnd="20dp" />
+
+    <TextView
+        android:id="@+id/authorPhone"
+        android:layout_below="@id/auteurLabel"
+        android:layout_toRightOf="@id/auteurLabel"
+        android:layout_alignBaseline="@id/auteurLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/auteurLabel" />
+
+    <TextView
+        android:id="@+id/auteurNomLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/auteurLabel"
+        android:layout_alignLeft="@id/auteurLabel"
+        android:text="@string/nom_auteur_offre"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginRight="20dp"
+        android:gravity="start"
+        android:layout_alignStart="@id/auteurLabel"
+        android:layout_marginEnd="20dp" />
+    <TextView
+        android:id="@+id/authorNom"
+        android:layout_below="@id/authorPhone"
+        android:layout_toRightOf="@id/authorPhone"
+        android:layout_alignBaseline="@id/auteurNomLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/auteurNomLabel" />
+
+
+    <TextView
+        android:id="@+id/auteurEmailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/auteurNomLabel"
+        android:layout_alignLeft="@id/auteurNomLabel"
+        android:text="@string/email_de_l_auteur"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginRight="20dp"
+        android:gravity="start"
+        android:layout_alignStart="@id/auteurNomLabel"
+        android:layout_marginEnd="20dp" />
+    <TextView
+        android:id="@+id/authorEmail"
+        android:layout_below="@id/auteurNomLabel"
+        android:layout_toRightOf="@id/auteurEmailLabel"
+        android:layout_alignBaseline="@id/auteurEmailLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/auteurEmailLabel" />
+
+
+    <TextView
+        android:id="@+id/quantiteLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/auteurEmailLabel"
+        android:layout_alignLeft="@id/auteurEmailLabel"
+        android:text="@string/quantit"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginRight="20dp"
+        android:gravity="start"
+        android:layout_alignStart="@id/auteurEmailLabel"
+        android:layout_marginEnd="20dp" />
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_below="@id/authorEmail"
+        android:layout_toRightOf="@id/quantiteLabel"
+        android:layout_alignBaseline="@id/quantiteLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/quantiteLabel" />
+
+
+    <TextView
+        android:id="@+id/prixUnitaireLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/quantiteLabel"
+        android:layout_alignLeft="@id/quantiteLabel"
+        android:text="@string/prix_unitaire"
+        android:textStyle="normal"
+        android:layout_marginRight="20dp"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_alignStart="@id/quantiteLabel"
+        android:layout_marginEnd="20dp" />
+
+    <TextView
+        android:id="@+id/prixUnitaire"
+        android:layout_below="@id/quantiteLabel"
+        android:layout_toRightOf="@id/prixUnitaireLabel"
+        android:layout_alignBaseline="@id/prixUnitaireLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/prixUnitaireLabel" />
+
+    <TextView
+        android:id="@+id/prixTotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prixUnitaireLabel"
+        android:layout_alignLeft="@id/prixUnitaireLabel"
+        android:text="@string/prix_total"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_alignStart="@id/prixUnitaireLabel" />
+
+    <TextView
+        android:id="@+id/prixTotal"
+        android:layout_below="@id/prixUnitaireLabel"
+        android:layout_toRightOf="@id/prixTotalLabel"
+        android:layout_alignBaseline="@id/prixTotalLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textSize="@dimen/text_size_textview"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/prixTotalLabel" />
+
+    <TextView
+        android:id="@+id/lieuxLivraisonLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prixTotalLabel"
+        android:layout_alignLeft="@id/prixTotalLabel"
+        android:text="@string/lieuxLivraison"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginRight="20dp"
+        android:gravity="start"
+        android:layout_alignStart="@id/prixTotalLabel"
+        android:layout_marginEnd="20dp" />
+    <TextView
+        android:id="@+id/lieuxLivraison"
+        android:layout_below="@id/prixTotalLabel"
+        android:layout_toRightOf="@id/regionLabel"
+        android:layout_alignBaseline="@id/regionLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/lieuxLivraisonLabel" />
+
+
+    <TextView
+        android:id="@+id/lieuxStockageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lieuxLivraisonLabel"
+        android:layout_alignLeft="@id/lieuxLivraisonLabel"
+        android:text="@string/lieu_stockage"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginRight="20dp"
+        android:gravity="start"
+        android:layout_alignStart="@id/prixTotalLabel"
+        android:layout_marginEnd="20dp" />
+    <TextView
+        android:id="@+id/lieuxStockage"
+        android:layout_below="@id/lieuxLivraisonLabel"
+        android:layout_toRightOf="@id/lieuxStockageLabel"
+        android:layout_alignBaseline="@id/lieuxStockageLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/lieuxLivraisonLabel" />
+
+    <TextView
+        android:id="@+id/regionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lieuxStockageLabel"
+        android:layout_alignLeft="@id/lieuxStockageLabel"
+        android:text="@string/region_offre_label"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginRight="20dp"
+        android:gravity="start"
+        android:layout_alignStart="@id/prixTotalLabel"
+        android:layout_marginEnd="20dp" />
+    <TextView
+        android:id="@+id/region"
+        android:layout_below="@id/lieuxStockageLabel"
+        android:layout_toRightOf="@id/regionLabel"
+        android:layout_alignBaseline="@id/regionLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/regionLabel" />
+
+    <TextView
+        android:id="@+id/conditionsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/regionLabel"
+        android:layout_alignLeft="@id/regionLabel"
+        android:text="@string/conditions"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_alignStart="@id/regionLabel" />
+
+    <TextView
+        android:id="@+id/conditions"
+        android:layout_below="@id/regionLabel"
+        android:layout_toRightOf="@id/conditionsLabel"
+        android:layout_alignBaseline="@id/conditionsLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textSize="@dimen/text_size_textview"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/conditionsLabel" />
+
+    <TextView
+        android:id="@+id/photoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/conditionsLabel"
+        android:layout_alignLeft="@id/conditionsLabel"
+        android:text="@string/photo"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_alignStart="@id/conditionsLabel"
+        />
+
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_below="@id/conditionsLabel"
+        android:layout_toRightOf="@id/photoLabel"
+        android:layout_alignTop="@id/photoLabel"
+        android:src="@drawable/ic_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/photoLabel"
+        android:contentDescription="@string/image_note" />
+
+
+
+    <TextView
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/photo"
+        android:layout_alignLeft="@id/photoLabel"
+        android:text="@string/date"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_alignStart="@id/photoLabel" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_below="@id/photo"
+        android:layout_toRightOf="@id/dateLabel"
+        android:layout_alignBaseline="@id/dateLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textSize="@dimen/text_size_textview"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/dateLabel" />
+
+
+    <View
+        android:id="@+id/separator"
+        android:visibility="visible"
+        style="@style/TextViewHorizontalSeparator"
+        android:layout_below="@id/date"/>
+
+
+
+</RelativeLayout>

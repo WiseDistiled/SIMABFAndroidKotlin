@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="position" type="com.tiramakan.simabf.core.modelView.GPSPositionForUI"/>
+    </data>
+
+<ScrollView
+android:id="@+id/ScrollPosition"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+    android:background="@color/white"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+
+    >
+    <TextView
+        android:id="@+id/formTitle"
+        style="@style/formTitleStyle"
+        android:text="@string/mise_a_jour_GPS"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+    <View
+        android:id="@+id/separator"
+        android:visibility="visible"
+        style="@style/TextViewHorizontalSeparatorForTitles"
+        android:layout_below="@id/formTitle"/>
+
+    <TextView
+        android:id="@+id/patience"
+        style="@style/formSubTitleStyle"
+        android:layout_below="@id/separator"
+        android:text="@string/veuillezPatienter"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <TextView
+        android:id="@+id/marche"
+        style="@style/formSubTitleStyle"
+        android:layout_below="@id/patience"
+        android:text=""
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        />
+    <TextView
+        android:id="@+id/longitudeLabel"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/patience"
+        android:layout_alignLeft="@id/formTitle"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="@dimen/text_size_textview"
+        android:text="@string/longitude"
+        android:layout_alignStart="@id/formTitle"
+        android:layout_marginEnd="20dp" />
+
+
+    <TextView
+        android:id="@+id/longitude"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/patience"
+        android:layout_toRightOf="@id/longitudeLabel"
+        android:textSize="@dimen/text_size_textview"
+        android:text="@{Double.toString(position.longitude)}"
+        android:layout_marginRight="20dp"
+        android:layout_toEndOf="@id/longitudeLabel"
+        android:layout_marginEnd="20dp" />
+
+
+    <TextView
+        android:id="@+id/latitudeLabel"
+        android:layout_below="@id/longitude"
+        android:layout_width="wrap_content"
+        android:layout_alignLeft="@id/longitudeLabel"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:textSize="@dimen/text_size_textview"
+        android:text="@string/latitude"
+        android:layout_alignStart="@id/longitudeLabel"
+        android:layout_marginEnd="20dp" />
+
+
+    <TextView
+        android:id="@+id/latitude"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_below="@id/longitude"
+        android:layout_toRightOf="@id/latitudeLabel"
+        android:textSize="@dimen/text_size_textview"
+        android:text="@{Double.toString(position.latitude)}"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_toEndOf="@id/latitudeLabel"
+        android:layout_marginEnd="20dp" />
+
+
+
+</RelativeLayout>
+</ScrollView>
+</layout>

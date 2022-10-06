@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/layout_color">
+    <TextView
+        android:id="@+id/produitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/produitLabel"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="start"
+        android:layout_marginStart="20dp" />
+    <TextView
+        android:id="@+id/produit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:textSize="@dimen/text_size_textview"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@id/produitLabel"
+        android:layout_alignBaseline="@id/produitLabel"
+        android:layout_toEndOf="@id/produitLabel"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:id="@+id/magazinLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/produit"
+        android:layout_alignLeft="@id/produit"
+        android:text="@string/depot"
+        android:textStyle="normal"
+        android:layout_marginRight="10dp"
+        android:gravity="start"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_alignStart="@id/produit"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/magazin"
+        android:layout_below="@id/produit"
+        android:layout_toRightOf="@id/magazinLabel"
+        android:layout_alignBaseline="@id/magazinLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/magazinLabel" />
+
+    <TextView
+        android:id="@+id/balanceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/magazin"
+        android:layout_alignLeft="@id/produit"
+        android:text="@string/stock"
+        android:textStyle="normal"
+        android:layout_marginRight="20dp"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_alignStart="@id/produit"
+        android:layout_marginEnd="20dp" />
+
+    <TextView
+        android:id="@+id/balance"
+        android:layout_below="@id/magazin"
+        android:layout_toRightOf="@id/balanceLabel"
+        android:layout_alignBaseline="@id/balanceLabel"
+        android:layout_marginRight="10dp"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:layout_alignLeft="@id/magazin"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/balanceLabel"
+        android:layout_marginEnd="10dp"
+        android:layout_alignStart="@id/magazin" />
+
+    <TextView
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/balance"
+        android:layout_alignLeft="@id/produit"
+        android:text="@string/date"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_alignStart="@id/produit" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_below="@id/balance"
+        android:layout_toRightOf="@id/dateLabel"
+        android:layout_alignBaseline="@id/dateLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:textStyle="bold"
+        android:gravity="start"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/dateLabel" />
+
+
+    <View
+        android:id="@+id/separator"
+        android:visibility="visible"
+        style="@style/TextViewHorizontalSeparator"
+        android:layout_below="@id/date"/>
+
+
+
+</RelativeLayout>

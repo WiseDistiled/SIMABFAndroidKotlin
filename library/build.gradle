@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+
+ext.ANDROID_BUILD_COMPILE_SDK_VERSION='23'
+ext.ANDROID_BUILD_TOOLS_VERSION='23.0.2'
+ext.VERSION_CODE='1'
+ext.VERSION_NAME='1'
+ext.ANDROID_BUILD_TARGET_SDK_VERSION='23'
+android {
+    compileSdkVersion Integer.parseInt(ANDROID_BUILD_COMPILE_SDK_VERSION)
+    buildToolsVersion ANDROID_BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion 7
+        targetSdkVersion Integer.parseInt(ANDROID_BUILD_TARGET_SDK_VERSION)
+        versionCode Integer.parseInt(VERSION_CODE)
+        versionName VERSION_NAME
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+//publish {
+//    userOrg = 'ferrannp'
+//    groupId = 'com.fnp'
+//    artifactId = 'material-preferences'
+//    version = VERSION_NAME
+//    description = 'Makes easier to create a preference screen on pre-Lollipop Android devices ' +
+//            'looking exactly as if it was a Lollipop one.'
+//    website = 'https://github.com/ferrannp/material-preferences'
+//    issueTracker = "${website}/issues"
+//    repository = "${website}.git"
+//}

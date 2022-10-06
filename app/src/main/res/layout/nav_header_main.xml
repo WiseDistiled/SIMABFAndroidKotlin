@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@drawable/side_nav_bar"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+   >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:src="@mipmap/logo_sima_bf_foreground"
+        android:contentDescription="@string/image" />
+
+    <RelativeLayout
+        android:id="@+id/appNameFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/appNameView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:text="@string/appName"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_large" />
+        <TextView
+            android:id="@+id/appVersionView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:layout_below="@+id/appNameView"
+            android:layout_alignStart="@+id/appNameView"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_large"
+            android:text="@string/appVersionName"
+            android:layout_alignLeft="@+id/appNameView" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_below="@+id/appVersionView"
+            android:layout_alignStart="@+id/appNameView"
+            android:paddingTop="@dimen/nav_header_vertical_link_spacing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_textview"
+            android:text="@string/appwebsite"
+            android:layout_alignLeft="@+id/appNameView" />
+
+   </RelativeLayout>
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/container"
+    android:layout_margin="10dp"
+    android:background="@color/layout_color">
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/firstname"
+        android:layout_toRightOf="@id/name"
+        android:layout_alignBaseline="@id/name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/name" />
+
+
+    <TextView
+        android:id="@+id/phoneLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_alignLeft="@id/name"
+        android:text="@string/numTelephone"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginRight="10dp"
+        android:gravity="start"
+        android:layout_alignStart="@id/name" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_below="@id/name"
+        android:layout_toRightOf="@id/phoneLabel"
+        android:layout_alignBaseline="@id/phoneLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/phoneLabel" />
+
+    <TextView
+        android:id="@+id/secondPhoneLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phoneLabel"
+        android:layout_alignLeft="@id/phoneLabel"
+        android:text="@string/secondPhone"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginRight="10dp"
+        android:gravity="start"
+        android:layout_alignStart="@id/phoneLabel"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/secondPhone"
+        android:layout_below="@id/phoneLabel"
+        android:layout_toRightOf="@id/secondPhoneLabel"
+        android:layout_alignBaseline="@id/secondPhoneLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/secondPhoneLabel" />
+    <TextView
+        android:id="@+id/emailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/secondPhoneLabel"
+        android:layout_alignLeft="@id/secondPhoneLabel"
+        android:text="@string/email_label_text"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginRight="10dp"
+        android:gravity="start"
+        android:layout_alignStart="@id/secondPhoneLabel"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_below="@id/secondPhoneLabel"
+        android:layout_toRightOf="@id/emailLabel"
+        android:layout_alignBaseline="@id/emailLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/emailLabel" />
+    <TextView
+        android:id="@+id/reseauLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailLabel"
+        android:layout_alignLeft="@id/emailLabel"
+        android:text="@string/reseau_label_text"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginRight="10dp"
+        android:gravity="start"
+        android:layout_alignStart="@id/emailLabel"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/reseau"
+        android:layout_below="@id/emailLabel"
+        android:layout_toRightOf="@id/reseauLabel"
+        android:layout_alignBaseline="@id/reseauLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/reseauLabel" />
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tiramakan.simabf.ui.view.widgets.MyDashboardLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dashboardFrame"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:layout_weight="1"
+    android:background="@android:color/transparent"
+    android:scrollbars="vertical">
+
+ <androidx.appcompat.widget.AppCompatButton
+     android:id="@+id/dashboard_prix"
+     style="@style/MyDashboardButton"
+     android:drawableTop="@mipmap/prix"
+     android:text="@string/prix_label" />
+
+ <androidx.appcompat.widget.AppCompatButton
+     android:id="@+id/dashboard_etalonnage"
+     style="@style/MyDashboardButton"
+     android:text="@string/etalonnage"
+     android:drawableTop="@mipmap/ic_etalonnage" />
+
+ <androidx.appcompat.widget.AppCompatButton
+     android:id="@+id/dashboard_offre_vente"
+     style="@style/MyDashboardButton"
+     android:text="@string/offre_de_vente"
+     android:drawableTop="@mipmap/offre_vente" />
+
+ <androidx.appcompat.widget.AppCompatButton android:id="@+id/dashboard_offre_achat"
+     style="@style/MyDashboardButton"
+     android:text="@string/offre_d_achat"
+     android:drawableTop="@mipmap/offre_achat" />
+
+ <androidx.appcompat.widget.AppCompatButton
+     android:id="@+id/dashboard_stocks"
+     style="@style/MyDashboardButton"
+     android:drawableTop="@mipmap/stocks"
+     android:text="@string/stock_label" />
+
+
+ <androidx.appcompat.widget.AppCompatButton
+     android:id="@+id/dashboard_demande"
+     style="@style/MyDashboardButton"
+     android:drawableTop="@mipmap/demande"
+     android:text="@string/demandes" />
+
+ <androidx.appcompat.widget.AppCompatButton
+     android:id="@+id/dashboard_enregistrer"
+     style="@style/MyDashboardButton"
+     android:drawableTop="@mipmap/enregistrer"
+     android:text="@string/register_label" />
+
+ <androidx.appcompat.widget.AppCompatButton
+     android:id="@+id/dashboard_lists"
+     style="@style/MyDashboardButton"
+     android:drawableTop="@mipmap/liste"
+     android:text="@string/listes" />
+</com.tiramakan.simabf.ui.view.widgets.MyDashboardLayout>
+

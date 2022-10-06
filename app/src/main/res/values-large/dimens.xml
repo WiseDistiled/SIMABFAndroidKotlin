@@ -1,0 +1,47 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!--<dimen nom="activity_horizontal_margin">16dp</dimen>-->
+    <!--<dimen nom="activity_vertical_margin">16dp</dimen>-->
+    <!--<dimen nom="text_margin">16dp</dimen>-->
+
+    <dimen name="text_margin">64dp</dimen>
+    <!--<dimen nom="text_margin">8dp</dimen>-->
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">3dp</dimen>
+    <dimen name="nav_header_vertical_link_spacing">32dp</dimen>
+    <!--<dimen nom="nav_header_vertical_spacing">8dp</dimen>-->
+    <dimen name="nav_header_height">220dp</dimen>
+    <!--<dimen nom="nav_header_height">160dp</dimen>-->
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!--<dimen nom="activity_horizontal_margin">16dp</dimen>-->
+    <!--<dimen nom="activity_vertical_margin">16dp</dimen>-->
+
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+    <dimen name="activity_vertical_margin">64dp</dimen>
+
+    <dimen name="fab_margin">8dp</dimen>
+    <dimen name="pie_chart_text1_size">42sp</dimen>
+    <dimen name="pie_chart_text2_size">16dp</dimen>
+
+
+    <dimen name="body_padding_medium">10dp</dimen>
+    <dimen name="body_padding_large">10dp</dimen>
+
+    <dimen name="text_size_title">24sp</dimen>
+    <dimen name="text_size_textview">14sp</dimen>
+    <dimen name="text_size_small">22sp</dimen>
+    <dimen name="text_size_textview_large">26sp</dimen>
+    <dimen name="edit_text_size">14sp</dimen>
+    <dimen name="grid_cell_text_size">26sp</dimen>
+    <dimen name="grid_cell_width">125dp</dimen> <!--+5-->
+    <dimen name="grid_cell_height">125dp</dimen>
+    <dimen name="text_size_large">16sp</dimen>
+
+
+    <dimen name="speaker_image_size">36dp</dimen>
+    <dimen name="speaker_image_padding">8dp</dimen>
+    <dimen name="vendor_image_size">100dp</dimen>
+    <dimen name="SmartGridHeight">500dp</dimen>
+
+
+</resources>

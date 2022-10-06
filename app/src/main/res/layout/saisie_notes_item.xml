@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android.support.design="http://schemas.android.com/tools"
+    android:background="@color/white">
+    <data>
+        <variable
+            name="note" type="com.tiramakan.simabf.core.modelView.NoteForUI"/>
+    </data>
+
+    <ScrollView
+        android:id="@+id/ScrollNotes"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            >
+
+            <TextView
+                android:id="@+id/formTitle"
+                style="@style/formTitleStyle"
+                android:layout_marginTop="10dp"
+                android:text="@string/saisieNotesDeMarche"
+                />
+            <View
+                android:id="@+id/separator"
+                android:visibility="visible"
+                style="@style/TextViewHorizontalSeparatorForTitles"
+                />
+
+            <TextView
+                android:id="@+id/labelmarche"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:text="@string/marche_titre"
+                android:textSize="@dimen/text_size_textview" />
+            <TextView
+                android:id="@+id/marche"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_textview"
+                android:text="@{note.marche}"
+                android:layout_marginStart="20dp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:theme="@style/TextLabel"
+                app:boxStrokeColor="@color/white"
+                app:boxBackgroundColor="@color/white"
+                android:background="@color/white"
+                android.support.design:hintAnimationEnabled="true"
+                android.support.design:hintEnabled="true"
+                app:hintTextAppearance="@style/hintStyle"
+                >
+                <EditText
+                    android:id="@+id/comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:gravity="start"
+                    android:focusable="true"
+                    android:maxLines="6"
+                    android:lines="3"
+                    android:hint="@string/note"
+                    android:binding="@{note.contenu}"
+                    android:layout_marginBottom="10dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/btnSelectPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:textSize="@dimen/text_size_textview"
+                android:text="@string/photo_label"
+                android:layout_marginStart="0dp" />
+
+
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_photo"
+                android:minHeight="100dp"
+                android:minWidth="100dp"
+                android:longClickable="false"
+                android:contentDescription="@string/descriptionNote" />
+            <TextView
+                android:id="@+id/coneilLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_textview"
+                android:text="@string/conseil_label"
+                android:layout_marginStart="0dp" />
+            <TextView
+                android:id="@+id/coneil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:textSize="@dimen/text_size_textview"
+                android:text="@string/conseil_reduction_taille_image"
+                android:layout_marginStart="0dp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/longitudeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:textSize="@dimen/text_size_textview"
+                    android:text="@string/longitude"
+                    android:layout_marginEnd="20dp" />
+                <TextView
+                    android:id="@+id/longitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/longitudeLabel"
+                    android:layout_alignBaseline="@id/longitudeLabel"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/text_size_textview"
+                    android:text="@{note.getLongitudeText()}"
+                    android:layout_toEndOf="@id/longitudeLabel" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/latitudeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/latitude"
+                    android:textSize="@dimen/text_size_textview"
+                    android:layout_marginEnd="20dp" />
+
+                <TextView
+                    android:id="@+id/latitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@id/latitudeLabel"
+                    android:layout_alignBaseline="@id/latitudeLabel"
+                    android:textSize="@dimen/text_size_textview"
+                    android:text="@{note.getLatitudeText()}"
+                    android:layout_marginRight="20dp"
+                    android:layout_toEndOf="@id/latitudeLabel"
+                    android:layout_marginEnd="20dp" />
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,64 @@
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="offerRequest" type="com.tiramakan.simabf.core.modelView.OfferRequestToUI"/>
+    </data>
+
+<ScrollView
+    android:id="@+id/ScrollPrix"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<RelativeLayout
+    android:id="@+id/frameDemandeOffre"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/formTitle"
+        style="@style/formTitleStyle"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/demande_d_offre_de_vente"
+        />
+    <View
+        android:id="@+id/separator"
+        android:visibility="visible"
+        style="@style/TextViewHorizontalSeparatorForTitles"
+        android:layout_below="@id/formTitle"/>
+
+    <TextView
+        android:id="@+id/labelProduit"
+        android:layout_below="@id/separator"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:text="@string/veuillez_saisir_les_noms_des_produits"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start|bottom" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/produits"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="start"
+        android:layout_below="@id/labelProduit"
+        android:layout_alignStart="@id/labelProduit"
+        android:layout_alignLeft="@id/labelProduit"
+        android:inputType="textAutoComplete"
+        android:binding="@{offerRequest.produits}"
+        android:minHeight="100dp"
+        tools:ignore="LabelFor" />
+
+
+</RelativeLayout>
+
+</ScrollView>
+</layout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/layout_color"
+        android:text="@string/ListeDesProduits"
+        android:layout_gravity="center"
+        style="@style/formTitleStyle"
+        />
+    <View
+        android:id="@+id/separator"
+        android:visibility="visible"
+        android:layout_marginBottom="20dp"
+        style="@style/TextViewHorizontalSeparatorForTitles"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:scrollbars="vertical" />
+
+</LinearLayout>
+
+

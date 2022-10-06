@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginStart="20dp">
+    <TextView
+        android:id="@+id/formTitle"
+        style="@style/formTitleStyle"
+        android:layout_marginLeft="10dp"
+        android:text="@string/liste_des_notes"
+        android:layout_marginStart="10dp" />
+    <View
+        android:id="@+id/separator"
+        android:visibility="visible"
+        android:layout_marginBottom="20dp"
+        style="@style/TextViewHorizontalSeparatorForTitles"
+        android:layout_below="@id/formTitle"/>
+
+    <com.tiramakan.simabf.ui.view.recyclers.ContextMenuRecyclerView
+        android:id="@+id/notesUIRecycler"
+        android:layout_below="@id/separator"
+        android:name="com.tiramakan.simagri.ui.view.NotesUI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        tools:context=".ui.view.Lists.ListNotesUI"
+        tools:listitem="@layout/note_item"
+        android:background="@color/layout_color" />
+    </RelativeLayout>
+
+
+
+

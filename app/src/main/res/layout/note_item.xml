@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/container"
+    android:background="@color/layout_color">
+<!--    <TextView-->
+<!--        android:id="@+id/title"-->
+<!--        android:layout_width="fill_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:layout_marginLeft="30dp"-->
+<!--        android:gravity="start"-->
+<!--        android:textStyle="bold"-->
+<!--        style="@style/formTitleStyle"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:layout_marginStart="30dp" />-->
+
+    <TextView
+        android:id="@+id/commentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contenu"
+        android:textStyle="normal"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_toRightOf="@id/commentLabel"
+        android:layout_alignBaseline="@id/commentLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:maxLines="4"
+        android:lines="4"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/commentLabel" />
+
+
+
+    <TextView
+        android:id="@+id/longitudeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comment"
+        android:layout_alignLeft="@id/commentLabel"
+        android:text="@string/longitudeLabel"
+        android:textStyle="normal"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_alignStart="@id/commentLabel"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/longitude"
+        android:layout_below="@id/longitudeLabel"
+        android:layout_toRightOf="@id/longitudeLabel"
+        android:layout_alignBaseline="@id/longitudeLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/longitudeLabel" />
+
+
+    <TextView
+        android:id="@+id/latitudeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/longitude"
+        android:layout_alignLeft="@id/commentLabel"
+        android:text="@string/latitudeLabel"
+        android:textStyle="normal"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_alignStart="@id/commentLabel"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/latitude"
+        android:layout_below="@id/latitudeLabel"
+        android:layout_toRightOf="@id/latitudeLabel"
+        android:layout_alignBaseline="@id/latitudeLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/latitudeLabel" />
+
+
+    <TextView
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/latitude"
+        android:layout_alignLeft="@id/commentLabel"
+        android:text="@string/date"
+        android:textStyle="normal"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_alignStart="@id/commentLabel"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_below="@id/latitude"
+        android:layout_toRightOf="@id/dateLabel"
+        android:layout_alignBaseline="@id/dateLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/dateLabel" />
+
+    <TextView
+        android:id="@+id/photoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date"
+        android:layout_alignLeft="@id/commentLabel"
+        android:text="@string/photo"
+        android:textStyle="normal"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_alignStart="@id/commentLabel"
+        android:layout_marginEnd="10dp" />
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_below="@id/date"
+        android:layout_toRightOf="@id/photoLabel"
+        android:layout_alignTop="@id/photoLabel"
+        android:src="@drawable/ic_photo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="3dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/photoLabel"
+        android:contentDescription="@string/image_note" />
+
+
+
+    <View
+        android:id="@+id/separator"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"
+        style="@style/TextViewHorizontalSeparator"
+        android:layout_below="@id/photo"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,182 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="priceToUI" type="com.tiramakan.simabf.core.modelView.PriceToUI"
+            />
+        <variable
+            name="pickedDate"
+            type="com.tiramakan.simabf.core.modelView.PickedDate" />
+    </data>
+    <ScrollView
+        android:id="@+id/ScrollPrix"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        >
+<RelativeLayout
+    android:id="@+id/priceLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+
+    >
+    <TextView
+        android:id="@+id/formTitle"
+        style="@style/formTitleStyle"
+        android:layout_marginLeft="10dp"
+        android:text="@string/modification_prix"
+        android:layout_marginStart="10dp" />
+    <View
+        android:id="@+id/separator"
+        android:visibility="visible"
+        style="@style/TextViewHorizontalSeparatorForTitles"
+        android:layout_below="@id/formTitle"/>
+
+    <TextView
+        android:id="@+id/dateSaisieLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/formTitle"
+        android:layout_below="@id/separator"
+        android:text="@string/date_de_relev"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginTop="10dp"
+        android:layout_alignStart="@id/formTitle" />
+
+    <DatePicker
+        android:id="@+id/dateSaisie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dateSaisieLabel"
+        android:layout_alignStart="@id/dateSaisieLabel"
+        android:datePickerMode="calendar"
+        android:calendarViewShown="false"
+        android:day="@{pickedDate.day}"
+        android:month="@{pickedDate.month}"
+        android:onDateChanged="@{pickedDate.dateChanged}"
+        android:year="@{pickedDate.year}"
+        android:layout_alignLeft="@id/dateSaisieLabel" />
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/dateSaisie"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@id/dateSaisieLabel"-->
+    <!--        android:layout_alignLeft="@id/dateSaisieLabel"-->
+    <!--        android:layout_marginBottom="10dp"-->
+    <!--        android:gravity="start"-->
+    <!--        android:inputType="date"-->
+    <!--        android:textSize="@dimen/edit_text_size"-->
+    <!--        android:text="@{priceToUI.prettyDate}"-->
+    <!--        android:layout_alignStart="@id/dateSaisieLabel" />-->
+
+
+    <TextView
+        android:id="@+id/labelmarche"
+        android:layout_below="@id/dateSaisie"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/dateSaisie"
+        android:layout_width="150dp"
+        android:text="@string/marche_titre"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_alignStart="@id/dateSaisie" />
+    <TextView
+        android:id="@+id/marche"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_toEndOf="@id/labelmarche"
+        android:layout_alignBaseline="@id/labelmarche"
+        android:layout_below="@id/dateSaisie"
+        android:textSize="@dimen/text_size_textview"
+        android:text="@{priceToUI.marche}" />
+
+    <!--    <Spinner-->
+    <!--        android:id="@+id/marche"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:padding="10sp"-->
+    <!--        android:spinnerMode="dialog"-->
+    <!--        android:layout_below="@id/labelmarche"-->
+    <!--        android:layout_alignLeft="@id/labelmarche"-->
+    <!--        android:nextFocusForward="@+id/tableView"-->
+    <!--        style="@style/Widget.AppCompat.Spinner.Underlined"-->
+    <!--        app:entries="@{priceToUI.marcheItems}"-->
+    <!--        app:selectedValue="@={priceToUI.marche}"-->
+    <!--        android:layout_alignStart="@id/labelmarche"-->
+    <!--        />-->
+
+    <TextView
+        android:id="@+id/produitLabel"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_alignLeft="@id/labelmarche"
+        android:layout_below="@id/labelmarche"
+        android:textSize="@dimen/text_size_textview"
+        android:text="@string/produit_titre"
+        android:layout_alignStart="@id/labelmarche" />
+
+    <TextView
+        android:id="@+id/produit"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/produitLabel"
+        android:layout_alignBaseline="@id/produitLabel"
+        android:layout_below="@id/labelmarche"
+        android:textSize="@dimen/text_size_textview"
+        android:text="@{priceToUI.produit}"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/produitLabel" />
+
+    <TextView
+        android:id="@+id/prixDeGrosLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/produitLabel"
+        android:layout_below="@id/produitLabel"
+        android:textSize="@dimen/text_size_textview"
+        android:text="@string/prix"
+        android:layout_alignStart="@id/produitLabel" />
+    <EditText
+        android:id="@+id/montant"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/prixDeGrosLabel"
+        android:layout_alignLeft="@id/prixDeGrosLabel"
+        android:textSize="@dimen/edit_text_size"
+        android:nextFocusForward="@+id/mesure"
+        android:text="@={priceToUI.montant}"
+        android:layout_alignStart="@id/prixDeGrosLabel" />
+
+    <Spinner
+        android:id="@+id/mesure"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:nestedScrollingEnabled="false"
+        android:textAppearance="?android:attr/textAppearance"
+        android:spinnerMode="dialog"
+        android:padding="0dp"
+        android:layout_below="@id/prixDeGrosLabel"
+        android:layout_alignBaseline="@id/montant"
+        android:layout_toRightOf="@id/montant"
+        android:layout_marginBottom="20dp"
+        android:layout_toEndOf="@id/montant"
+        app:entries="@{priceToUI.mesuresItems}"
+        app:selectedValue="@={priceToUI.mesure}"
+        />
+
+</RelativeLayout>
+    </ScrollView>
+</layout>

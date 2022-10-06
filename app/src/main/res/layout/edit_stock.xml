@@ -1,0 +1,144 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="stockForUI" type="com.tiramakan.simabf.core.modelView.StockForUI"
+            />
+    </data>
+    <ScrollView
+        android:id="@+id/ScrollStock"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+
+        >
+<RelativeLayout
+    android:id="@+id/detailStock"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+
+    >
+    <TextView
+        android:id="@+id/formTitle"
+        style="@style/formTitleStyle"
+        android:layout_marginLeft="10dp"
+        android:text="@string/modificationStock"
+        android:layout_marginStart="10dp" />
+    <View
+        android:id="@+id/separator"
+        android:visibility="visible"
+        style="@style/TextViewHorizontalSeparatorForTitles"
+        android:layout_below="@id/formTitle"/>
+
+    <TextView
+        android:id="@+id/depotLabel"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/formTitle"
+        android:layout_below="@id/separator"
+        android:textSize="@dimen/text_size_textview"
+        android:text="@string/nom_du_d_p_t"
+        android:layout_alignStart="@id/formTitle" />
+
+    <AutoCompleteTextView
+        android:id="@+id/depot"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/depotLabel"
+        android:layout_below="@id/depotLabel"
+        android:gravity="start"
+        android:textSize="@dimen/edit_text_size"
+        android:binding="@{stockForUI.depot}"
+        android:layout_alignStart="@id/depotLabel" />
+
+    <TextView
+        android:id="@+id/produitLabel"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/formTitle"
+        android:layout_below="@id/depot"
+        android:textSize="@dimen/text_size_textview"
+        android:text="@string/nom_du_produit"
+        android:layout_alignStart="@id/formTitle" />
+
+    <AutoCompleteTextView
+        android:id="@+id/produit"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/produitLabel"
+        android:layout_below="@id/produitLabel"
+        android:gravity="start"
+        android:textSize="@dimen/edit_text_size"
+        android:binding="@{stockForUI.produit}"
+        android:layout_alignStart="@id/produitLabel" />
+
+
+    <TextView
+        android:id="@+id/dateSaisieLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/produit"
+        android:layout_below="@id/produit"
+        android:textSize="@dimen/text_size_textview"
+        android:text="@string/date_de_relev"
+        android:layout_alignStart="@id/produit" />
+
+        <EditText
+            android:id="@+id/dateSaisie"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dateSaisieLabel"
+            android:layout_alignLeft="@id/depotLabel"
+            android:layout_marginBottom="10dp"
+            android:gravity="start"
+            android:inputType="date"
+            android:textSize="@dimen/edit_text_size"
+            android:binding="@{stockForUI.date}"
+            android:layout_alignStart="@id/depotLabel" />
+    <TextView
+        android:id="@+id/stockLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/dateSaisie"
+        android:layout_below="@id/dateSaisie"
+         android:textSize="@dimen/text_size_textview"
+        android:text="@string/stock"
+        android:layout_alignStart="@id/dateSaisie" />
+
+
+    <EditText
+        android:id="@+id/stock"
+        android:layout_width="80dp"
+        android:layout_alignLeft="@id/stockLabel"
+        android:layout_below="@id/stockLabel"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:inputType="number"
+        android:textSize="@dimen/edit_text_size"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:binding="@{stockForUI.balance}"
+        android:layout_alignStart="@id/stockLabel"
+        android:layout_marginEnd="10dp" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/mesure"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:nestedScrollingEnabled="false"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:spinnerMode="dialog"
+        android:layout_alignBaseline="@id/stock"
+        android:layout_toRightOf="@id/stock"
+        android:layout_marginBottom="20dp"
+        android:layout_toEndOf="@id/stock"
+        android:binding="@{stockForUI.mesure}"
+        />
+
+</RelativeLayout>
+    </ScrollView>
+</layout>

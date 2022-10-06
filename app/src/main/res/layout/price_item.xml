@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/container"
+    android:background="@color/layout_color">
+    <TextView
+        android:id="@+id/typePrixLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/typePrixLabel"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="start"
+        android:layout_marginStart="20dp" />
+    <TextView
+        android:id="@+id/typePrix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:textSize="@dimen/text_size_textview"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@id/typePrixLabel"
+        android:layout_alignBaseline="@id/typePrixLabel"
+        android:layout_toEndOf="@id/typePrixLabel"
+        android:layout_marginStart="20dp" />
+    <TextView
+        android:id="@+id/produitLabel"
+        android:layout_below="@id/typePrixLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/produitLabel"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp" />
+    <TextView
+        android:id="@+id/produit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:textSize="@dimen/text_size_textview"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@id/produitLabel"
+        android:layout_alignBaseline="@id/produitLabel"
+        android:layout_toEndOf="@id/produitLabel"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:id="@+id/marcheLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/produitLabel"
+        android:layout_alignLeft="@id/produitLabel"
+        android:text="@string/march"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_alignStart="@id/produitLabel"
+         />
+
+    <TextView
+        android:id="@+id/marche"
+        android:layout_below="@id/produitLabel"
+        android:layout_toRightOf="@id/marcheLabel"
+        android:layout_alignBaseline="@id/marcheLabel"
+        android:layout_toEndOf="@id/marcheLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+         />
+
+    <TextView
+        android:id="@+id/prixGrosLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/marche"
+        android:layout_alignLeft="@id/produitLabel"
+        android:text="@string/prixlabel"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_alignStart="@id/produitLabel"
+        />
+
+    <TextView
+        android:id="@+id/prix"
+        android:layout_below="@id/marche"
+        android:layout_toRightOf="@id/prixGrosLabel"
+        android:layout_alignBaseline="@id/prixGrosLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_toEndOf="@id/prixGrosLabel" />
+
+    <TextView
+        android:id="@+id/commentaireLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prixGrosLabel"
+        android:layout_alignLeft="@id/prixGrosLabel"
+        android:text="@string/commentaire_Label"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_alignStart="@id/prixGrosLabel"
+        />
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_toRightOf="@id/commentaireLabel"
+        android:layout_alignBaseline="@id/commentaireLabel"
+        android:layout_below="@id/prixGrosLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:maxLines="4"
+        android:lines="4"
+        android:layout_toEndOf="@id/commentaireLabel" />
+
+
+   <TextView
+        android:id="@+id/noteMarcheLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/commentaireLabel"
+        android:layout_alignLeft="@id/commentaireLabel"
+        android:text="@string/contenu"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_alignStart="@id/commentaireLabel"
+       />
+
+    <TextView
+        android:id="@+id/noteMarche"
+        android:layout_toRightOf="@id/noteMarcheLabel"
+        android:layout_alignBaseline="@id/noteMarcheLabel"
+        android:layout_below="@id/prixGrosLabel"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:maxLines="4"
+        android:lines="4"
+        android:layout_toEndOf="@id/noteMarcheLabel" />
+
+
+
+    <TextView
+        android:id="@+id/longitudeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/noteMarcheLabel"
+        android:layout_alignLeft="@id/noteMarcheLabel"
+        android:text="@string/longitudeLabel"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_alignStart="@id/noteMarcheLabel"
+         />
+
+    <TextView
+        android:id="@+id/longitude"
+        android:layout_below="@id/noteMarcheLabel"
+        android:layout_toRightOf="@id/longitudeLabel"
+        android:layout_alignBaseline="@id/longitudeLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_toEndOf="@id/longitudeLabel" />
+
+
+    <TextView
+        android:id="@+id/latitudeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/longitude"
+        android:layout_alignLeft="@id/noteMarcheLabel"
+        android:text="@string/latitudeLabel"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_alignStart="@id/noteMarcheLabel"
+         />
+
+    <TextView
+        android:id="@+id/latitude"
+        android:layout_below="@id/longitude"
+        android:layout_toRightOf="@id/latitudeLabel"
+        android:layout_alignBaseline="@id/latitudeLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_toEndOf="@id/latitudeLabel" />
+
+
+    <TextView
+        android:id="@+id/photoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/latitudeLabel"
+        android:layout_alignLeft="@id/latitudeLabel"
+        android:text="@string/photo"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_alignStart="@id/latitudeLabel"
+         />
+
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_below="@id/latitudeLabel"
+        android:layout_toRightOf="@id/photoLabel"
+        android:layout_alignTop="@id/photoLabel"
+        android:src="@drawable/ic_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/photoLabel"
+        android:contentDescription="@string/image_note" />
+
+
+    <TextView
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/photo"
+        android:layout_alignLeft="@id/photoLabel"
+        android:text="@string/date"
+        android:textStyle="normal"
+        android:textSize="@dimen/text_size_textview"
+        android:gravity="start"
+        android:layout_alignStart="@id/photoLabel"
+       />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_below="@id/photo"
+        android:layout_toRightOf="@id/dateLabel"
+        android:layout_alignBaseline="@id/dateLabel"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_textview"
+        android:layout_toEndOf="@id/dateLabel" />
+
+    <View
+        android:id="@+id/separator"
+        android:visibility="visible"
+        style="@style/TextViewHorizontalSeparator"
+        android:layout_below="@id/date"/>
+
+
+
+</RelativeLayout>

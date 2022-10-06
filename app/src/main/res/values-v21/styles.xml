@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SettingsTheme" parent="MyMaterialTheme">
+        <item name="windowNoTitle">false</item>
+        <item name="windowActionBar">true</item>
+        <item name="actionBarStyle">@style/AppTheme.actionBarStyle</item>
+    </style>
+
+    <!-- To follow the guidelines http://www.google.com/design/spec/layout/structure.html#structure-toolbars -->
+    <style name="AppTheme.actionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="background">?attr/colorPrimary</item>
+        <item name="contentInsetStart">72dp</item>
+        <item name="contentInsetLeft">72dp</item>
+    </style>
+
+    <style name="AlertDialogCustom" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@color/layout_color</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">@dimen/text_size_textview</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:colorAccent">@color/fab_menu_colorRipple_green</item>
+    </style>
+</resources>
